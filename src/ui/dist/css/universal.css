@@ -1,3 +1,28 @@
-
+:root {
+  --un-blue: #0d6efd;
+  --un-indigo: #6610f2;
+  --un-purple: #6f42c1;
+  --un-pink: #d63384;
+  --un-red: #dc3545;
+  --un-orange: #fd7e14;
+  --un-yellow: #ffc107;
+  --un-green: #198754;
+  --un-teal: #20c997;
+  --un-cyan: #0dcaf0;
+  --un-white: #fff;
+  --un-gray: #6c757d;
+  --un-gray-dark: #343a40;
+  --un-primary: #0d6efd;
+  --un-secondary: #6c757d;
+  --un-success: #198754;
+  --un-info: #0dcaf0;
+  --un-warning: #ffc107;
+  --un-danger: #dc3545;
+  --un-light: #f8f9fa;
+  --un-dark: #212529;
+  --un-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --un-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --un-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
 
 /*# sourceMappingURL=universal.css.map */
