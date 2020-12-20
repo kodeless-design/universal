@@ -1,0 +1,13 @@
+{
+  "name": "universal-ui",
+  "version": "1.0.0",
+  "description": "A universal font-end component library for building functional yet beautiful interfaces.",
+  "scripts": {
+  },
+  "keywords": [
+    "ui",
+    "component",
+    "functional",
+    "beautiful"
+  ]
+}
