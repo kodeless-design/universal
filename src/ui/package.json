@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "A universal front-end component library for building functional yet beautiful interfaces.",
   "scripts": {
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/"
   },
   "keywords": [
     "ui",
     "component",
     "functional",
     "beautiful"
-  ]
+  ],
+  "devDependencies": {
+    "sass": "^1.30.0"
+  }
 }
