@@ -14,7 +14,7 @@
   <br>
   <a href="https://github.com/kodeless-design/universal/issues/new?template=bug_report.md">Report Bug</a>
   ·
-  <a href="https://github.com/twbs/bootstrap/issues/new?template=feature_request.md">Request Feature</a>
+  <a href="https://github.com/kodeless-design/universal/issues/new?template=feature_request.md">Request Feature</a>
   ·
   <a href="https://opensource.kodeless.design/universal-ui/templates">Themes</a>
   ·

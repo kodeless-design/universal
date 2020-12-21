@@ -29,7 +29,7 @@
   }
 }
 
-// Internal Bootstrap function to turn maps into its negative variant.
+// Internal Universal function to turn maps into its negative variant.
 // It prefixes the keys with `n` and makes the value negative.
 @function negativify-map($map) {
   $result: ();
@@ -90,7 +90,7 @@
 }
 
 // Color contrast
-// See https://github.com/twbs/bootstrap/pull/30168
+// See https://github.com/kodeless-design/universal/pull/30168
 
 // A list of pre-calculated numbers of pow(($value / 255 + .055) / 1.055, 2.4). (from 0 to 255)
 // stylelint-disable-next-line scss/dollar-variable-default, scss/dollar-variable-pattern

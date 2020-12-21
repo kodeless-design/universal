@@ -86,7 +86,7 @@
   }
 
   // Use disabled attribute in addition of :disabled pseudo-class
-  // See: https://github.com/twbs/bootstrap/issues/28247
+  // See: https://github.com/kodeless-design/universal/issues/28247
   &[disabled],
   &:disabled {
     ~ .form-check-label {
