@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "A universal front-end component library for building functional yet beautiful interfaces.",
   "scripts": {
-    "css": "npm-run-all css-compile css-prefix",
+    "css": "npm-run-all css-compile css-prefix css-rtl",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
     "css-prefix": "npm-run-all --parallel css-prefix-*",
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
-    "css-prefix-examples": "postcss --config build/postcss.config.js --replace \"site/content/**/*.css\"",
-    "css-prefix-examples-rtl": "cross-env-shell NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"site/content/docs/$npm_package_version_short/examples/\" --ext \".rtl.css\" --base \"site/content/docs/$npm_package_version_short/examples/\" \"site/content/docs/$npm_package_version_short/examples/{blog,carousel,dashboard,cheatsheet}/*.css\" \"!site/content/docs/$npm_package_version_short/examples/{blog,carousel,dashboard,cheatsheet}/*.rtl.css\""
+    "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\""
   },
   "keywords": [
     "ui",
@@ -18,9 +17,11 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.1.0",
+    "cross-env": "^7.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.1",
+    "rtlcss": "^3.0.0",
     "sass": "^1.30.0"
   },
   "dependencies": {},
