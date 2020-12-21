@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Universal (v5.0.0-beta1): modal.js
+ * Universal (v1.0.0): modal.js
  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */

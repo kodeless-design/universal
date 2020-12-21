@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Universal (v5.0.0-beta1): dom/event-handler.js
+ * Universal (v1.0.0): dom/event-handler.js
  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -90,7 +90,7 @@ function getEvent(element) {
   return eventRegistry[uid]
 }
 
-function bootstrapHandler(element, fn) {
+function universalHandler(element, fn) {
   return function handler(event) {
     event.delegateTarget = element
 
@@ -102,7 +102,7 @@ function bootstrapHandler(element, fn) {
   }
 }
 
-function bootstrapDelegationHandler(element, selector, fn) {
+function universalDelegationHandler(element, selector, fn) {
   return function handler(event) {
     const domElements = element.querySelectorAll(selector)
 
@@ -183,8 +183,8 @@ function addHandler(element, originalTypeEvent, handler, delegationFn, oneOff) {
 
   const uid = getUidEvent(originalHandler, originalTypeEvent.replace(namespaceRegex, ''))
   const fn = delegation ?
-    bootstrapDelegationHandler(element, handler, delegationFn) :
-    bootstrapHandler(element, handler)
+    universalDelegationHandler(element, handler, delegationFn) :
+    universalHandler(element, handler)
 
   fn.delegationSelector = delegation ? handler : null
   fn.originalHandler = originalHandler

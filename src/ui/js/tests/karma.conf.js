@@ -95,7 +95,7 @@ const conf = {
     ],
     output: {
       format: 'iife',
-      name: 'bootstrapTest',
+      name: 'universalTest',
       sourcemap: 'inline'
     }
   }
@@ -106,7 +106,7 @@ if (browserStack) {
   conf.browserStack = {
     username: env.BROWSER_STACK_USERNAME,
     accessKey: env.BROWSER_STACK_ACCESS_KEY,
-    build: `bootstrap-${new Date().toISOString()}`,
+    build: `universal-${new Date().toISOString()}`,
     project: 'Universal',
     retryLimit: 2
   }

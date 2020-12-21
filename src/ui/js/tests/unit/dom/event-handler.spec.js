@@ -91,10 +91,10 @@ describe('EventHandler', () => {
         }
       }
 
-      EventHandler.one(div, 'bootstrap', obj.oneListener)
+      EventHandler.one(div, 'universal', obj.oneListener)
 
-      EventHandler.trigger(div, 'bootstrap')
-      EventHandler.trigger(div, 'bootstrap')
+      EventHandler.trigger(div, 'universal')
+      EventHandler.trigger(div, 'universal')
 
       setTimeout(() => {
         expect(called).toEqual(1)
