@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "A universal front-end component library for building functional yet beautiful interfaces.",
   "scripts": {
-    "css": "npm-run-all css-compile css-prefix css-rtl",
+    "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
     "css-prefix": "npm-run-all --parallel css-prefix-*",
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
-    "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\""
+    "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
+    "css-minify": "npm-run-all --parallel css-minify-*",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal.min.css dist/css/universal.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal-grid.min.css dist/css/universal-grid.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal-utilities.min.css dist/css/universal-utilities.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal-reboot.min.css dist/css/universal-reboot.css",
+    "css-minify-rtl": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal.rtl.min.css dist/css/universal.rtl.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal-grid.rtl.min.css dist/css/universal-grid.rtl.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal-utilities.rtl.min.css dist/css/universal-utilities.rtl.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/universal-reboot.rtl.min.css dist/css/universal-reboot.rtl.css"
   },
   "keywords": [
     "ui",
@@ -17,6 +20,7 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.1.0",
+    "clean-css-cli": "^4.3.0",
     "cross-env": "^7.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.1",
