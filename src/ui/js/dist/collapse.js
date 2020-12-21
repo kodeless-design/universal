@@ -16,36 +16,76 @@
   var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
   var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
 
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
+  function _extends() {
+    _extends = Object.assign || function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+
+      return target;
+    };
+
+    return _extends.apply(this, arguments);
+  }
+
+  function _inheritsLoose(subClass, superClass) {
+    subClass.prototype = Object.create(superClass.prototype);
+    subClass.prototype.constructor = subClass;
+    subClass.__proto__ = superClass;
+  }
+
   /**
    * --------------------------------------------------------------------------
    * Universal (v1.0.0): util/index.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
-  const MILLISECONDS_MULTIPLIER = 1000;
-  const TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+  var MILLISECONDS_MULTIPLIER = 1000;
+  var TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
-  const toType = obj => {
+  var toType = function toType(obj) {
     if (obj === null || obj === undefined) {
-      return `${obj}`;
+      return "" + obj;
     }
 
     return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
   };
 
-  const getSelector = element => {
-    let selector = element.getAttribute('data-bs-target');
+  var getSelector = function getSelector(element) {
+    var selector = element.getAttribute('data-bs-target');
 
     if (!selector || selector === '#') {
-      const hrefAttr = element.getAttribute('href');
+      var hrefAttr = element.getAttribute('href');
       selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
     }
 
     return selector;
   };
 
-  const getSelectorFromElement = element => {
-    const selector = getSelector(element);
+  var getSelectorFromElement = function getSelectorFromElement(element) {
+    var selector = getSelector(element);
 
     if (selector) {
       return document.querySelector(selector) ? selector : null;
@@ -54,23 +94,23 @@
     return null;
   };
 
-  const getElementFromSelector = element => {
-    const selector = getSelector(element);
+  var getElementFromSelector = function getElementFromSelector(element) {
+    var selector = getSelector(element);
     return selector ? document.querySelector(selector) : null;
   };
 
-  const getTransitionDurationFromElement = element => {
+  var getTransitionDurationFromElement = function getTransitionDurationFromElement(element) {
     if (!element) {
       return 0;
     } // Get transition-duration of the element
 
 
-    let {
-      transitionDuration,
-      transitionDelay
-    } = window.getComputedStyle(element);
-    const floatTransitionDuration = Number.parseFloat(transitionDuration);
-    const floatTransitionDelay = Number.parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
+    var _window$getComputedSt = window.getComputedStyle(element),
+        transitionDuration = _window$getComputedSt.transitionDuration,
+        transitionDelay = _window$getComputedSt.transitionDelay;
+
+    var floatTransitionDuration = Number.parseFloat(transitionDuration);
+    var floatTransitionDelay = Number.parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
 
     if (!floatTransitionDuration && !floatTransitionDelay) {
       return 0;
@@ -82,16 +122,18 @@
     return (Number.parseFloat(transitionDuration) + Number.parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
   };
 
-  const triggerTransitionEnd = element => {
+  var triggerTransitionEnd = function triggerTransitionEnd(element) {
     element.dispatchEvent(new Event(TRANSITION_END));
   };
 
-  const isElement = obj => (obj[0] || obj).nodeType;
+  var isElement = function isElement(obj) {
+    return (obj[0] || obj).nodeType;
+  };
 
-  const emulateTransitionEnd = (element, duration) => {
-    let called = false;
-    const durationPadding = 5;
-    const emulatedDuration = duration + durationPadding;
+  var emulateTransitionEnd = function emulateTransitionEnd(element, duration) {
+    var called = false;
+    var durationPadding = 5;
+    var emulatedDuration = duration + durationPadding;
 
     function listener() {
       called = true;
@@ -99,31 +141,32 @@
     }
 
     element.addEventListener(TRANSITION_END, listener);
-    setTimeout(() => {
+    setTimeout(function () {
       if (!called) {
         triggerTransitionEnd(element);
       }
     }, emulatedDuration);
   };
 
-  const typeCheckConfig = (componentName, config, configTypes) => {
-    Object.keys(configTypes).forEach(property => {
-      const expectedTypes = configTypes[property];
-      const value = config[property];
-      const valueType = value && isElement(value) ? 'element' : toType(value);
+  var typeCheckConfig = function typeCheckConfig(componentName, config, configTypes) {
+    Object.keys(configTypes).forEach(function (property) {
+      var expectedTypes = configTypes[property];
+      var value = config[property];
+      var valueType = value && isElement(value) ? 'element' : toType(value);
 
       if (!new RegExp(expectedTypes).test(valueType)) {
-        throw new Error(`${componentName.toUpperCase()}: ` + `Option "${property}" provided type "${valueType}" ` + `but expected type "${expectedTypes}".`);
+        throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
       }
     });
   };
 
-  const reflow = element => element.offsetHeight;
+  var reflow = function reflow(element) {
+    return element.offsetHeight;
+  };
 
-  const getjQuery = () => {
-    const {
-      jQuery
-    } = window;
+  var getjQuery = function getjQuery() {
+    var _window = window,
+        jQuery = _window.jQuery;
 
     if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
       return jQuery;
@@ -132,7 +175,7 @@
     return null;
   };
 
-  const onDOMContentLoaded = callback => {
+  var onDOMContentLoaded = function onDOMContentLoaded(callback) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', callback);
     } else {
@@ -140,19 +183,19 @@
     }
   };
 
-  const isRTL = document.documentElement.dir === 'rtl';
+  var isRTL = document.documentElement.dir === 'rtl';
 
-  const defineJQueryPlugin = (name, plugin) => {
-    onDOMContentLoaded(() => {
-      const $ = getjQuery();
+  var defineJQueryPlugin = function defineJQueryPlugin(name, plugin) {
+    onDOMContentLoaded(function () {
+      var $ = getjQuery();
       /* istanbul ignore if */
 
       if ($) {
-        const JQUERY_NO_CONFLICT = $.fn[name];
+        var JQUERY_NO_CONFLICT = $.fn[name];
         $.fn[name] = plugin.jQueryInterface;
         $.fn[name].Constructor = plugin;
 
-        $.fn[name].noConflict = () => {
+        $.fn[name].noConflict = function () {
           $.fn[name] = JQUERY_NO_CONFLICT;
           return plugin.jQueryInterface;
         };
@@ -161,21 +204,15 @@
   };
 
   /**
-   * --------------------------------------------------------------------------
-   * Universal (v1.0.0): base-component.js
-   * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
-  const VERSION = '5.0.0-beta1';
+  var VERSION = '5.0.0-beta1';
 
-  class BaseComponent {
-    constructor(element) {
+  var BaseComponent = /*#__PURE__*/function () {
+    function BaseComponent(element) {
       if (!element) {
         return;
       }
@@ -184,127 +221,131 @@
       Data__default['default'].setData(element, this.constructor.DATA_KEY, this);
     }
 
-    dispose() {
+    var _proto = BaseComponent.prototype;
+
+    _proto.dispose = function dispose() {
       Data__default['default'].removeData(this._element, this.constructor.DATA_KEY);
       this._element = null;
     }
     /** Static */
+    ;
 
-
-    static getInstance(element) {
+    BaseComponent.getInstance = function getInstance(element) {
       return Data__default['default'].getData(element, this.DATA_KEY);
-    }
+    };
 
-    static get VERSION() {
-      return VERSION;
-    }
+    _createClass(BaseComponent, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }]);
 
-  }
+    return BaseComponent;
+  }();
 
-  /**
-   * --------------------------------------------------------------------------
-   * Universal (v1.0.0): collapse.js
-   * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
-  const NAME = 'collapse';
-  const DATA_KEY = 'bs.collapse';
-  const EVENT_KEY = `.${DATA_KEY}`;
-  const DATA_API_KEY = '.data-api';
-  const Default = {
+  var NAME = 'collapse';
+  var DATA_KEY = 'bs.collapse';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var Default = {
     toggle: true,
     parent: ''
   };
-  const DefaultType = {
+  var DefaultType = {
     toggle: 'boolean',
     parent: '(string|element)'
   };
-  const EVENT_SHOW = `show${EVENT_KEY}`;
-  const EVENT_SHOWN = `shown${EVENT_KEY}`;
-  const EVENT_HIDE = `hide${EVENT_KEY}`;
-  const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
-  const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
-  const CLASS_NAME_SHOW = 'show';
-  const CLASS_NAME_COLLAPSE = 'collapse';
-  const CLASS_NAME_COLLAPSING = 'collapsing';
-  const CLASS_NAME_COLLAPSED = 'collapsed';
-  const WIDTH = 'width';
-  const HEIGHT = 'height';
-  const SELECTOR_ACTIVES = '.show, .collapsing';
-  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="collapse"]';
+  var EVENT_SHOW = "show" + EVENT_KEY;
+  var EVENT_SHOWN = "shown" + EVENT_KEY;
+  var EVENT_HIDE = "hide" + EVENT_KEY;
+  var EVENT_HIDDEN = "hidden" + EVENT_KEY;
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var CLASS_NAME_SHOW = 'show';
+  var CLASS_NAME_COLLAPSE = 'collapse';
+  var CLASS_NAME_COLLAPSING = 'collapsing';
+  var CLASS_NAME_COLLAPSED = 'collapsed';
+  var WIDTH = 'width';
+  var HEIGHT = 'height';
+  var SELECTOR_ACTIVES = '.show, .collapsing';
+  var SELECTOR_DATA_TOGGLE = '[data-bs-toggle="collapse"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  class Collapse extends BaseComponent {
-    constructor(element, config) {
-      super(element);
-      this._isTransitioning = false;
-      this._config = this._getConfig(config);
-      this._triggerArray = SelectorEngine__default['default'].find(`${SELECTOR_DATA_TOGGLE}[href="#${element.id}"],` + `${SELECTOR_DATA_TOGGLE}[data-bs-target="#${element.id}"]`);
-      const toggleList = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
+  var Collapse = /*#__PURE__*/function (_BaseComponent) {
+    _inheritsLoose(Collapse, _BaseComponent);
 
-      for (let i = 0, len = toggleList.length; i < len; i++) {
-        const elem = toggleList[i];
-        const selector = getSelectorFromElement(elem);
-        const filterElement = SelectorEngine__default['default'].find(selector).filter(foundElem => foundElem === element);
+    function Collapse(element, config) {
+      var _this;
+
+      _this = _BaseComponent.call(this, element) || this;
+      _this._isTransitioning = false;
+      _this._config = _this._getConfig(config);
+      _this._triggerArray = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE + "[href=\"#" + element.id + "\"]," + (SELECTOR_DATA_TOGGLE + "[data-bs-target=\"#" + element.id + "\"]"));
+      var toggleList = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
+
+      for (var i = 0, len = toggleList.length; i < len; i++) {
+        var elem = toggleList[i];
+        var selector = getSelectorFromElement(elem);
+        var filterElement = SelectorEngine__default['default'].find(selector).filter(function (foundElem) {
+          return foundElem === element;
+        });
 
         if (selector !== null && filterElement.length) {
-          this._selector = selector;
+          _this._selector = selector;
 
-          this._triggerArray.push(elem);
+          _this._triggerArray.push(elem);
         }
       }
 
-      this._parent = this._config.parent ? this._getParent() : null;
+      _this._parent = _this._config.parent ? _this._getParent() : null;
 
-      if (!this._config.parent) {
-        this._addAriaAndCollapsedClass(this._element, this._triggerArray);
+      if (!_this._config.parent) {
+        _this._addAriaAndCollapsedClass(_this._element, _this._triggerArray);
       }
 
-      if (this._config.toggle) {
-        this.toggle();
+      if (_this._config.toggle) {
+        _this.toggle();
       }
+
+      return _this;
     } // Getters
 
 
-    static get Default() {
-      return Default;
-    }
+    var _proto = Collapse.prototype;
 
-    static get DATA_KEY() {
-      return DATA_KEY;
-    } // Public
-
-
-    toggle() {
+    // Public
+    _proto.toggle = function toggle() {
       if (this._element.classList.contains(CLASS_NAME_SHOW)) {
         this.hide();
       } else {
         this.show();
       }
-    }
+    };
 
-    show() {
+    _proto.show = function show() {
+      var _this2 = this;
+
       if (this._isTransitioning || this._element.classList.contains(CLASS_NAME_SHOW)) {
         return;
       }
 
-      let actives;
-      let activesData;
+      var actives;
+      var activesData;
 
       if (this._parent) {
-        actives = SelectorEngine__default['default'].find(SELECTOR_ACTIVES, this._parent).filter(elem => {
-          if (typeof this._config.parent === 'string') {
-            return elem.getAttribute('data-bs-parent') === this._config.parent;
+        actives = SelectorEngine__default['default'].find(SELECTOR_ACTIVES, this._parent).filter(function (elem) {
+          if (typeof _this2._config.parent === 'string') {
+            return elem.getAttribute('data-bs-parent') === _this2._config.parent;
           }
 
           return elem.classList.contains(CLASS_NAME_COLLAPSE);
@@ -315,10 +356,12 @@
         }
       }
 
-      const container = SelectorEngine__default['default'].findOne(this._selector);
+      var container = SelectorEngine__default['default'].findOne(this._selector);
 
       if (actives) {
-        const tempActiveData = actives.find(elem => container !== elem);
+        var tempActiveData = actives.find(function (elem) {
+          return container !== elem;
+        });
         activesData = tempActiveData ? Data__default['default'].getData(tempActiveData, DATA_KEY) : null;
 
         if (activesData && activesData._isTransitioning) {
@@ -326,14 +369,14 @@
         }
       }
 
-      const startEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW);
+      var startEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW);
 
       if (startEvent.defaultPrevented) {
         return;
       }
 
       if (actives) {
-        actives.forEach(elemActive => {
+        actives.forEach(function (elemActive) {
           if (container !== elemActive) {
             Collapse.collapseInterface(elemActive, 'hide');
           }
@@ -344,7 +387,7 @@
         });
       }
 
-      const dimension = this._getDimension();
+      var dimension = this._getDimension();
 
       this._element.classList.remove(CLASS_NAME_COLLAPSE);
 
@@ -353,7 +396,7 @@
       this._element.style[dimension] = 0;
 
       if (this._triggerArray.length) {
-        this._triggerArray.forEach(element => {
+        this._triggerArray.forEach(function (element) {
           element.classList.remove(CLASS_NAME_COLLAPSED);
           element.setAttribute('aria-expanded', true);
         });
@@ -361,50 +404,54 @@
 
       this.setTransitioning(true);
 
-      const complete = () => {
-        this._element.classList.remove(CLASS_NAME_COLLAPSING);
+      var complete = function complete() {
+        _this2._element.classList.remove(CLASS_NAME_COLLAPSING);
 
-        this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW);
+        _this2._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW);
 
-        this._element.style[dimension] = '';
-        this.setTransitioning(false);
-        EventHandler__default['default'].trigger(this._element, EVENT_SHOWN);
+        _this2._element.style[dimension] = '';
+
+        _this2.setTransitioning(false);
+
+        EventHandler__default['default'].trigger(_this2._element, EVENT_SHOWN);
       };
 
-      const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
-      const scrollSize = `scroll${capitalizedDimension}`;
-      const transitionDuration = getTransitionDurationFromElement(this._element);
+      var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
+      var scrollSize = "scroll" + capitalizedDimension;
+      var transitionDuration = getTransitionDurationFromElement(this._element);
       EventHandler__default['default'].one(this._element, 'transitionend', complete);
       emulateTransitionEnd(this._element, transitionDuration);
-      this._element.style[dimension] = `${this._element[scrollSize]}px`;
-    }
+      this._element.style[dimension] = this._element[scrollSize] + "px";
+    };
 
-    hide() {
+    _proto.hide = function hide() {
+      var _this3 = this;
+
       if (this._isTransitioning || !this._element.classList.contains(CLASS_NAME_SHOW)) {
         return;
       }
 
-      const startEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE);
+      var startEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE);
 
       if (startEvent.defaultPrevented) {
         return;
       }
 
-      const dimension = this._getDimension();
+      var dimension = this._getDimension();
 
-      this._element.style[dimension] = `${this._element.getBoundingClientRect()[dimension]}px`;
+      this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
       reflow(this._element);
 
       this._element.classList.add(CLASS_NAME_COLLAPSING);
 
       this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW);
 
-      const triggerArrayLength = this._triggerArray.length;
+      var triggerArrayLength = this._triggerArray.length;
 
       if (triggerArrayLength > 0) {
-        for (let i = 0; i < triggerArrayLength; i++) {
-          const trigger = this._triggerArray[i];
-          const elem = getElementFromSelector(trigger);
+        for (var i = 0; i < triggerArrayLength; i++) {
+          var trigger = this._triggerArray[i];
+          var elem = getElementFromSelector(trigger);
 
           if (elem && !elem.classList.contains(CLASS_NAME_SHOW)) {
             trigger.classList.add(CLASS_NAME_COLLAPSED);
@@ -415,53 +462,52 @@
 
       this.setTransitioning(true);
 
-      const complete = () => {
-        this.setTransitioning(false);
+      var complete = function complete() {
+        _this3.setTransitioning(false);
 
-        this._element.classList.remove(CLASS_NAME_COLLAPSING);
+        _this3._element.classList.remove(CLASS_NAME_COLLAPSING);
 
-        this._element.classList.add(CLASS_NAME_COLLAPSE);
+        _this3._element.classList.add(CLASS_NAME_COLLAPSE);
 
-        EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN);
+        EventHandler__default['default'].trigger(_this3._element, EVENT_HIDDEN);
       };
 
       this._element.style[dimension] = '';
-      const transitionDuration = getTransitionDurationFromElement(this._element);
+      var transitionDuration = getTransitionDurationFromElement(this._element);
       EventHandler__default['default'].one(this._element, 'transitionend', complete);
       emulateTransitionEnd(this._element, transitionDuration);
-    }
+    };
 
-    setTransitioning(isTransitioning) {
+    _proto.setTransitioning = function setTransitioning(isTransitioning) {
       this._isTransitioning = isTransitioning;
-    }
+    };
 
-    dispose() {
-      super.dispose();
+    _proto.dispose = function dispose() {
+      _BaseComponent.prototype.dispose.call(this);
+
       this._config = null;
       this._parent = null;
       this._triggerArray = null;
       this._isTransitioning = null;
     } // Private
+    ;
 
-
-    _getConfig(config) {
-      config = { ...Default,
-        ...config
-      };
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, Default, config);
       config.toggle = Boolean(config.toggle); // Coerce string values
 
       typeCheckConfig(NAME, config, DefaultType);
       return config;
-    }
+    };
 
-    _getDimension() {
+    _proto._getDimension = function _getDimension() {
       return this._element.classList.contains(WIDTH) ? WIDTH : HEIGHT;
-    }
+    };
 
-    _getParent() {
-      let {
-        parent
-      } = this._config;
+    _proto._getParent = function _getParent() {
+      var _this4 = this;
+
+      var parent = this._config.parent;
 
       if (isElement(parent)) {
         // it's a jQuery object
@@ -472,22 +518,22 @@
         parent = SelectorEngine__default['default'].findOne(parent);
       }
 
-      const selector = `${SELECTOR_DATA_TOGGLE}[data-bs-parent="${parent}"]`;
-      SelectorEngine__default['default'].find(selector, parent).forEach(element => {
-        const selected = getElementFromSelector(element);
+      var selector = SELECTOR_DATA_TOGGLE + "[data-bs-parent=\"" + parent + "\"]";
+      SelectorEngine__default['default'].find(selector, parent).forEach(function (element) {
+        var selected = getElementFromSelector(element);
 
-        this._addAriaAndCollapsedClass(selected, [element]);
+        _this4._addAriaAndCollapsedClass(selected, [element]);
       });
       return parent;
-    }
+    };
 
-    _addAriaAndCollapsedClass(element, triggerArray) {
+    _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
       if (!element || !triggerArray.length) {
         return;
       }
 
-      const isOpen = element.classList.contains(CLASS_NAME_SHOW);
-      triggerArray.forEach(elem => {
+      var isOpen = element.classList.contains(CLASS_NAME_SHOW);
+      triggerArray.forEach(function (elem) {
         if (isOpen) {
           elem.classList.remove(CLASS_NAME_COLLAPSED);
         } else {
@@ -497,14 +543,12 @@
         elem.setAttribute('aria-expanded', isOpen);
       });
     } // Static
+    ;
 
+    Collapse.collapseInterface = function collapseInterface(element, config) {
+      var data = Data__default['default'].getData(element, DATA_KEY);
 
-    static collapseInterface(element, config) {
-      let data = Data__default['default'].getData(element, DATA_KEY);
-      const _config = { ...Default,
-        ...Manipulator__default['default'].getDataAttributes(element),
-        ...(typeof config === 'object' && config ? config : {})
-      };
+      var _config = _extends({}, Default, Manipulator__default['default'].getDataAttributes(element), typeof config === 'object' && config ? config : {});
 
       if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
         _config.toggle = false;
@@ -516,20 +560,33 @@
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`);
+          throw new TypeError("No method named \"" + config + "\"");
         }
 
         data[config]();
       }
-    }
+    };
 
-    static jQueryInterface(config) {
+    Collapse.jQueryInterface = function jQueryInterface(config) {
       return this.each(function () {
         Collapse.collapseInterface(this, config);
       });
-    }
+    };
 
-  }
+    _createClass(Collapse, null, [{
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }, {
+      key: "DATA_KEY",
+      get: function get() {
+        return DATA_KEY;
+      }
+    }]);
+
+    return Collapse;
+  }(BaseComponent);
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation
@@ -543,12 +600,12 @@
       event.preventDefault();
     }
 
-    const triggerData = Manipulator__default['default'].getDataAttributes(this);
-    const selector = getSelectorFromElement(this);
-    const selectorElements = SelectorEngine__default['default'].find(selector);
-    selectorElements.forEach(element => {
-      const data = Data__default['default'].getData(element, DATA_KEY);
-      let config;
+    var triggerData = Manipulator__default['default'].getDataAttributes(this);
+    var selector = getSelectorFromElement(this);
+    var selectorElements = SelectorEngine__default['default'].find(selector);
+    selectorElements.forEach(function (element) {
+      var data = Data__default['default'].getData(element, DATA_KEY);
+      var config;
 
       if (data) {
         // update parent attribute

@@ -21,23 +21,34 @@
    * Constants
    * ------------------------------------------------------------------------
    */
-  const NODE_TEXT = 3;
-  const SelectorEngine = {
-    find(selector, element = document.documentElement) {
-      return [].concat(...Element.prototype.querySelectorAll.call(element, selector));
-    },
+  var NODE_TEXT = 3;
+  var SelectorEngine = {
+    find: function find(selector, element) {
+      var _ref;
 
-    findOne(selector, element = document.documentElement) {
+      if (element === void 0) {
+        element = document.documentElement;
+      }
+
+      return (_ref = []).concat.apply(_ref, Element.prototype.querySelectorAll.call(element, selector));
+    },
+    findOne: function findOne(selector, element) {
+      if (element === void 0) {
+        element = document.documentElement;
+      }
+
       return Element.prototype.querySelector.call(element, selector);
     },
+    children: function children(element, selector) {
+      var _ref2;
 
-    children(element, selector) {
-      return [].concat(...element.children).filter(child => child.matches(selector));
+      return (_ref2 = []).concat.apply(_ref2, element.children).filter(function (child) {
+        return child.matches(selector);
+      });
     },
-
-    parents(element, selector) {
-      const parents = [];
-      let ancestor = element.parentNode;
+    parents: function parents(element, selector) {
+      var parents = [];
+      var ancestor = element.parentNode;
 
       while (ancestor && ancestor.nodeType === Node.ELEMENT_NODE && ancestor.nodeType !== NODE_TEXT) {
         if (ancestor.matches(selector)) {
@@ -49,9 +60,8 @@
 
       return parents;
     },
-
-    prev(element, selector) {
-      let previous = element.previousElementSibling;
+    prev: function prev(element, selector) {
+      var previous = element.previousElementSibling;
 
       while (previous) {
         if (previous.matches(selector)) {
@@ -63,9 +73,8 @@
 
       return [];
     },
-
-    next(element, selector) {
-      let next = element.nextElementSibling;
+    next: function next(element, selector) {
+      var next = element.nextElementSibling;
 
       while (next) {
         if (next.matches(selector)) {
@@ -77,7 +86,6 @@
 
       return [];
     }
-
   };
 
   return SelectorEngine;

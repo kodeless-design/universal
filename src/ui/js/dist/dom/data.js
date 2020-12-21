@@ -21,28 +21,27 @@
    * Constants
    * ------------------------------------------------------------------------
    */
-  const mapData = (() => {
-    const storeData = {};
-    let id = 1;
+  var mapData = function () {
+    var storeData = {};
+    var id = 1;
     return {
-      set(element, key, data) {
+      set: function set(element, key, data) {
         if (typeof element.bsKey === 'undefined') {
           element.bsKey = {
-            key,
-            id
+            key: key,
+            id: id
           };
           id++;
         }
 
         storeData[element.bsKey.id] = data;
       },
-
-      get(element, key) {
+      get: function get(element, key) {
         if (!element || typeof element.bsKey === 'undefined') {
           return null;
         }
 
-        const keyProperties = element.bsKey;
+        var keyProperties = element.bsKey;
 
         if (keyProperties.key === key) {
           return storeData[keyProperties.id];
@@ -50,36 +49,31 @@
 
         return null;
       },
-
-      delete(element, key) {
+      delete: function _delete(element, key) {
         if (typeof element.bsKey === 'undefined') {
           return;
         }
 
-        const keyProperties = element.bsKey;
+        var keyProperties = element.bsKey;
 
         if (keyProperties.key === key) {
           delete storeData[keyProperties.id];
           delete element.bsKey;
         }
       }
-
     };
-  })();
+  }();
 
-  const Data = {
-    setData(instance, key, data) {
+  var Data = {
+    setData: function setData(instance, key, data) {
       mapData.set(instance, key, data);
     },
-
-    getData(instance, key) {
+    getData: function getData(instance, key) {
       return mapData.get(instance, key);
     },
-
-    removeData(instance, key) {
+    removeData: function removeData(instance, key) {
       mapData.delete(instance, key);
     }
-
   };
 
   return Data;
