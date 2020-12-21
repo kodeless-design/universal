@@ -2135,7 +2135,7 @@
 
   function normalizeParams(originalTypeEvent, handler, delegationFn) {
     var delegation = typeof handler === 'string';
-    var originalHandler = delegation ? delegationFn : handler; // allow to get the native events from namespaced events ('click.bs.button' --> 'click')
+    var originalHandler = delegation ? delegationFn : handler; // allow to get the native events from namespaced events ('click.un.button' --> 'click')
 
     var typeEvent = originalTypeEvent.replace(stripNameRegex, '');
     var custom = customEvents[typeEvent];
@@ -5072,7 +5072,7 @@
     _proto.dispose = function dispose() {
       clearTimeout(this._timeout);
       EventHandler.off(this._element, this.constructor.EVENT_KEY);
-      EventHandler.off(this._element.closest("." + CLASS_NAME_MODAL), 'hide.bs.modal', this._hideModalHandler);
+      EventHandler.off(this._element.closest("." + CLASS_NAME_MODAL), 'hide.un.modal', this._hideModalHandler);
 
       if (this.tip && this.tip.parentNode) {
         this.tip.parentNode.removeChild(this.tip);
@@ -5408,7 +5408,7 @@
         }
       };
 
-      EventHandler.on(this._element.closest("." + CLASS_NAME_MODAL), 'hide.bs.modal', this._hideModalHandler);
+      EventHandler.on(this._element.closest("." + CLASS_NAME_MODAL), 'hide.un.modal', this._hideModalHandler);
 
       if (this.config.selector) {
         this.config = _extends({}, this.config, {

@@ -52,7 +52,7 @@ describe('Popover', () => {
 
   describe('EVENT_KEY', () => {
     it('should return plugin event key', () => {
-      expect(Popover.EVENT_KEY).toEqual('.bs.popover')
+      expect(Popover.EVENT_KEY).toEqual('.un.popover')
     })
   })
 
@@ -69,7 +69,7 @@ describe('Popover', () => {
       const popoverEl = fixtureEl.querySelector('a')
       const popover = new Popover(popoverEl)
 
-      popoverEl.addEventListener('shown.bs.popover', () => {
+      popoverEl.addEventListener('shown.un.popover', () => {
         expect(document.querySelector('.popover')).toBeDefined()
         done()
       })
@@ -86,7 +86,7 @@ describe('Popover', () => {
         content: () => 'loves writing tests （╯°□°）╯︵ ┻━┻'
       })
 
-      popoverEl.addEventListener('shown.bs.popover', () => {
+      popoverEl.addEventListener('shown.un.popover', () => {
         const popoverDisplayed = document.querySelector('.popover')
 
         expect(popoverDisplayed).toBeDefined()
@@ -106,7 +106,7 @@ describe('Popover', () => {
         content: 'Popover content'
       })
 
-      popoverEl.addEventListener('shown.bs.popover', () => {
+      popoverEl.addEventListener('shown.un.popover', () => {
         const popoverDisplayed = document.querySelector('.popover')
 
         expect(popoverDisplayed).toBeDefined()
@@ -123,7 +123,7 @@ describe('Popover', () => {
       const popoverEl = fixtureEl.querySelector('a')
       const popover = new Popover(popoverEl)
 
-      popoverEl.addEventListener('shown.bs.popover', () => {
+      popoverEl.addEventListener('shown.un.popover', () => {
         const tip = document.querySelector('.popover')
         expect(tip).toBeDefined()
         expect(tip.classList.contains('custom-class')).toBeTrue()
@@ -141,11 +141,11 @@ describe('Popover', () => {
       const popoverEl = fixtureEl.querySelector('a')
       const popover = new Popover(popoverEl)
 
-      popoverEl.addEventListener('shown.bs.popover', () => {
+      popoverEl.addEventListener('shown.un.popover', () => {
         popover.hide()
       })
 
-      popoverEl.addEventListener('hidden.bs.popover', () => {
+      popoverEl.addEventListener('hidden.un.popover', () => {
         expect(document.querySelector('.popover')).toBeNull()
         done()
       })

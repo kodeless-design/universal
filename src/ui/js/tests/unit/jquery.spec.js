@@ -47,7 +47,7 @@ describe('jQuery', () => {
     ].join('')
 
     $(fixtureEl).find('.alert')
-      .one('closed.bs.alert', () => {
+      .one('closed.un.alert', () => {
         expect($(fixtureEl).find('.alert').length).toEqual(0)
         done()
       })

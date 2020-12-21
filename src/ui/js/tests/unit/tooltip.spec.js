@@ -52,7 +52,7 @@ describe('Tooltip', () => {
 
   describe('EVENT_KEY', () => {
     it('should return plugin event key', () => {
-      expect(Tooltip.EVENT_KEY).toEqual('.bs.tooltip')
+      expect(Tooltip.EVENT_KEY).toEqual('.un.tooltip')
     })
   })
 
@@ -98,7 +98,7 @@ describe('Tooltip', () => {
 
       const tooltipInContainerEl = containerEl.querySelector('a')
 
-      tooltipInContainerEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipInContainerEl.addEventListener('shown.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).not.toBeNull()
         tooltipContainer.dispose()
         done()
@@ -132,7 +132,7 @@ describe('Tooltip', () => {
 
       tooltip.enable()
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeDefined()
         done()
       })
@@ -150,7 +150,7 @@ describe('Tooltip', () => {
 
       tooltip.disable()
 
-      tooltipEl.addEventListener('show.bs.tooltip', () => {
+      tooltipEl.addEventListener('show.un.tooltip', () => {
         throw new Error('should not show a disabled tooltip')
       })
 
@@ -187,7 +187,7 @@ describe('Tooltip', () => {
 
       tooltip.disable()
 
-      tooltipEl.addEventListener('show.bs.tooltip', () => {
+      tooltipEl.addEventListener('show.un.tooltip', () => {
         throw new Error('should not show a disabled tooltip')
       })
 
@@ -205,7 +205,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeDefined()
         done()
       })
@@ -223,7 +223,7 @@ describe('Tooltip', () => {
 
       spyOn(tooltip, 'toggle').and.callThrough()
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(tooltip.toggle).toHaveBeenCalled()
         done()
       })
@@ -237,11 +237,11 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         tooltip.toggle()
       })
 
-      tooltipEl.addEventListener('hidden.bs.tooltip', () => {
+      tooltipEl.addEventListener('hidden.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeNull()
         done()
       })
@@ -259,11 +259,11 @@ describe('Tooltip', () => {
 
       spyOn(tooltip, 'toggle').and.callThrough()
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         tooltipEl.click()
       })
 
-      tooltipEl.addEventListener('hidden.bs.tooltip', () => {
+      tooltipEl.addEventListener('hidden.un.tooltip', () => {
         expect(tooltip.toggle).toHaveBeenCalled()
         done()
       })
@@ -292,10 +292,10 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         tooltip.hide()
       })
-      tooltipEl.addEventListener('hidden.bs.tooltip', () => {
+      tooltipEl.addEventListener('hidden.un.tooltip', () => {
         tooltip.dispose()
         expect(tooltip.tip).toEqual(null)
         expect(Tooltip.getInstance(tooltipEl)).toEqual(null)
@@ -311,7 +311,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeDefined()
 
         tooltip.dispose()
@@ -331,7 +331,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tooltipShown = document.querySelector('.tooltip')
 
         expect(tooltipShown).toBeDefined()
@@ -374,7 +374,7 @@ describe('Tooltip', () => {
 
       spyOn(EventHandler, 'on')
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).not.toBeNull()
         expect(EventHandler.on).toHaveBeenCalled()
         document.documentElement.ontouchstart = undefined
@@ -392,11 +392,11 @@ describe('Tooltip', () => {
         placement: 'bottom'
       })
 
-      tooltipEl.addEventListener('inserted.bs.tooltip', () => {
+      tooltipEl.addEventListener('inserted.un.tooltip', () => {
         expect(tooltip.getTipElement().classList.contains('bs-tooltip-bottom')).toEqual(true)
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tooltipShown = document.querySelector('.tooltip')
 
         expect(tooltipShown.classList.contains('bs-tooltip-bottom')).toEqual(true)
@@ -413,12 +413,12 @@ describe('Tooltip', () => {
       const tooltip = new Tooltip(tooltipEl)
 
       const firstCallback = () => {
-        tooltipEl.removeEventListener('shown.bs.tooltip', firstCallback)
+        tooltipEl.removeEventListener('shown.un.tooltip', firstCallback)
         let tooltipShown = document.querySelector('.tooltip')
 
         tooltipShown.parentNode.removeChild(tooltipShown)
 
-        tooltipEl.addEventListener('shown.bs.tooltip', () => {
+        tooltipEl.addEventListener('shown.un.tooltip', () => {
           tooltipShown = document.querySelector('.tooltip')
 
           expect(tooltipShown).not.toBeNull()
@@ -428,7 +428,7 @@ describe('Tooltip', () => {
         tooltip.show()
       }
 
-      tooltipEl.addEventListener('shown.bs.tooltip', firstCallback)
+      tooltipEl.addEventListener('shown.un.tooltip', firstCallback)
 
       tooltip.show()
     })
@@ -441,7 +441,7 @@ describe('Tooltip', () => {
         container: fixtureEl
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(fixtureEl.querySelector('.tooltip')).toBeDefined()
         done()
       })
@@ -460,7 +460,7 @@ describe('Tooltip', () => {
         }
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(fixtureEl.querySelector('.tooltip')).toBeDefined()
         done()
       })
@@ -476,7 +476,7 @@ describe('Tooltip', () => {
         container: '#fixture'
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(fixtureEl.querySelector('.tooltip')).toBeDefined()
         done()
       })
@@ -493,7 +493,7 @@ describe('Tooltip', () => {
         placement: spy
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeDefined()
         expect(spy).toHaveBeenCalled()
         done()
@@ -510,7 +510,7 @@ describe('Tooltip', () => {
         animation: false
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tip = document.querySelector('.tooltip')
 
         expect(tip).toBeDefined()
@@ -534,7 +534,7 @@ describe('Tooltip', () => {
       }
     })
 
-    it('should not show a tooltip if show.bs.tooltip is prevented', done => {
+    it('should not show a tooltip if show.un.tooltip is prevented', done => {
       fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip">'
 
       const tooltipEl = fixtureEl.querySelector('a')
@@ -547,12 +547,12 @@ describe('Tooltip', () => {
         }, 10)
       }
 
-      tooltipEl.addEventListener('show.bs.tooltip', ev => {
+      tooltipEl.addEventListener('show.un.tooltip', ev => {
         ev.preventDefault()
         expectedDone()
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         throw new Error('Tooltip should not be shown')
       })
 
@@ -640,7 +640,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tip = document.querySelector('.tooltip')
         expect(tip).toBeDefined()
         expect(tip.classList.contains('custom-class')).toBeTrue()
@@ -658,7 +658,7 @@ describe('Tooltip', () => {
         customClass: 'custom-class custom-class-2'
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tip = document.querySelector('.tooltip')
         expect(tip).toBeDefined()
         expect(tip.classList.contains('custom-class')).toBeTrue()
@@ -678,7 +678,7 @@ describe('Tooltip', () => {
         customClass: spy
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tip = document.querySelector('.tooltip')
         expect(tip).toBeDefined()
         expect(spy).toHaveBeenCalled()
@@ -697,8 +697,8 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => tooltip.hide())
-      tooltipEl.addEventListener('hidden.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => tooltip.hide())
+      tooltipEl.addEventListener('hidden.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeNull()
         expect(tooltipEl.getAttribute('aria-describedby')).toBeNull()
         done()
@@ -713,13 +713,13 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         document.documentElement.ontouchstart = noop
         spyOn(EventHandler, 'off')
         tooltip.hide()
       })
 
-      tooltipEl.addEventListener('hidden.bs.tooltip', () => {
+      tooltipEl.addEventListener('hidden.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeNull()
         expect(EventHandler.off).toHaveBeenCalled()
         document.documentElement.ontouchstart = undefined
@@ -737,8 +737,8 @@ describe('Tooltip', () => {
         animation: false
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => tooltip.hide())
-      tooltipEl.addEventListener('hidden.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => tooltip.hide())
+      tooltipEl.addEventListener('hidden.un.tooltip', () => {
         expect(document.querySelector('.tooltip')).toBeNull()
         expect(tooltipEl.getAttribute('aria-describedby')).toBeNull()
         done()
@@ -762,12 +762,12 @@ describe('Tooltip', () => {
         animation: false
       })
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => tooltip.hide())
-      tooltipEl.addEventListener('hide.bs.tooltip', event => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => tooltip.hide())
+      tooltipEl.addEventListener('hide.un.tooltip', event => {
         event.preventDefault()
         assertDone()
       })
-      tooltipEl.addEventListener('hidden.bs.tooltip', () => {
+      tooltipEl.addEventListener('hidden.un.tooltip', () => {
         throw new Error('should not trigger hidden event')
       })
 
@@ -796,7 +796,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         spyOn(tooltip._popper, 'update')
 
         tooltip.update()
@@ -896,7 +896,7 @@ describe('Tooltip', () => {
         placement: 'right'
       })
 
-      tooltipEl.addEventListener('inserted.bs.tooltip', () => {
+      tooltipEl.addEventListener('inserted.un.tooltip', () => {
         expect(tooltip.getTipElement().classList.contains('bs-tooltip-end')).toEqual(true)
         done()
       })
@@ -912,7 +912,7 @@ describe('Tooltip', () => {
         placement: 'left'
       })
 
-      tooltipEl.addEventListener('inserted.bs.tooltip', () => {
+      tooltipEl.addEventListener('inserted.un.tooltip', () => {
         expect(tooltip.getTipElement().classList.contains('bs-tooltip-start')).toEqual(true)
         done()
       })
@@ -1092,7 +1092,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tooltipShown = document.querySelector('.tooltip')
 
         expect(tooltipShown).toBeDefined()
@@ -1109,7 +1109,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tooltipShown = document.querySelector('.tooltip')
 
         expect(tooltipShown).toBeDefined()
@@ -1126,7 +1126,7 @@ describe('Tooltip', () => {
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
 
-      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+      tooltipEl.addEventListener('shown.un.tooltip', () => {
         const tooltipShown = document.querySelector('.tooltip')
 
         expect(tooltipShown).toBeDefined()

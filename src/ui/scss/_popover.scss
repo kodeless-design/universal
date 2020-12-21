@@ -35,7 +35,7 @@
   }
 }
 
-.bs-popover-top {
+.un-popover-top {
   // Overrule margin set by popper.js
   margin-bottom: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
 
@@ -56,7 +56,7 @@
   }
 }
 
-.bs-popover-end {
+.un-popover-end {
   // Overrule margin set by popper.js
   margin-left: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
 
@@ -80,7 +80,7 @@
   }
 }
 
-.bs-popover-bottom {
+.un-popover-bottom {
   // Overrule margin set by popper.js
   margin-top: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
 
@@ -113,7 +113,7 @@
   }
 }
 
-.bs-popover-start {
+.un-popover-start {
   // Overrule margin set by popper.js
   margin-right: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
 
@@ -137,18 +137,18 @@
   }
 }
 
-.bs-popover-auto {
+.un-popover-auto {
   &[data-popper-placement^="top"] {
-    @extend .bs-popover-top;
+    @extend .un-popover-top;
   }
   &[data-popper-placement^="right"] {
-    @extend .bs-popover-end;
+    @extend .un-popover-end;
   }
   &[data-popper-placement^="bottom"] {
-    @extend .bs-popover-bottom;
+    @extend .un-popover-bottom;
   }
   &[data-popper-placement^="left"] {
-    @extend .bs-popover-start;
+    @extend .un-popover-start;
   }
 }
 

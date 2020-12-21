@@ -220,7 +220,7 @@ class Tooltip extends BaseComponent {
     clearTimeout(this._timeout)
 
     EventHandler.off(this._element, this.constructor.EVENT_KEY)
-    EventHandler.off(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.bs.modal', this._hideModalHandler)
+    EventHandler.off(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.un.modal', this._hideModalHandler)
 
     if (this.tip && this.tip.parentNode) {
       this.tip.parentNode.removeChild(this.tip)
@@ -554,7 +554,7 @@ class Tooltip extends BaseComponent {
       }
     }
 
-    EventHandler.on(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.bs.modal', this._hideModalHandler)
+    EventHandler.on(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.un.modal', this._hideModalHandler)
 
     if (this.config.selector) {
       this.config = {

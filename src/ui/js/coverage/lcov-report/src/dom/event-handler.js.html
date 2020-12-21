@@ -862,7 +862,7 @@ function normalizeParams(originalTypeEvent, handler, delegationFn) {
   const delegation = typeof handler === 'string'
   const originalHandler = delegation ? delegationFn : handler
 &nbsp;
-  // allow to get the native events from namespaced events ('click.bs.button' --&gt; 'click')
+  // allow to get the native events from namespaced events ('click.un.button' --&gt; 'click')
   let typeEvent = originalTypeEvent.replace(stripNameRegex, '')
   const custom = customEvents[typeEvent]
 &nbsp;

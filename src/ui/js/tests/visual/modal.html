@@ -254,12 +254,12 @@
       btnPreventModal.addEventListener('click', function () {
         function shownFirefoxModal() {
           modalFf.hide()
-          firefoxModal.removeEventListener('shown.bs.modal', hideFirefoxModal)
+          firefoxModal.removeEventListener('shown.un.modal', hideFirefoxModal)
         }
 
         function hideFirefoxModal(event) {
           event.preventDefault()
-          firefoxModal.removeEventListener('hide.bs.modal', hideFirefoxModal)
+          firefoxModal.removeEventListener('hide.un.modal', hideFirefoxModal)
 
           if (modalFf._isTransitioning) {
             console.error('Modal plugin should not set _isTransitioning when hide event is prevented')
@@ -269,8 +269,8 @@
           }
         }
 
-        firefoxModal.addEventListener('shown.bs.modal', shownFirefoxModal)
-        firefoxModal.addEventListener('hide.bs.modal', hideFirefoxModal)
+        firefoxModal.addEventListener('shown.un.modal', shownFirefoxModal)
+        firefoxModal.addEventListener('hide.un.modal', hideFirefoxModal)
         modalFf.show()
       })
 
@@ -279,12 +279,12 @@
       var t1
       var slowModal = document.getElementById('slowModal')
 
-      slowModal.addEventListener('shown.bs.modal', function () {
+      slowModal.addEventListener('shown.un.modal', function () {
         t1 = performance.now()
         console.log('transition-duration took ' + (t1 - t0) + 'ms.')
       })
 
-      slowModal.addEventListener('show.bs.modal', function () {
+      slowModal.addEventListener('show.un.modal', function () {
         t0 = performance.now()
       })
     </script>

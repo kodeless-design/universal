@@ -395,7 +395,7 @@
 
   function normalizeParams(originalTypeEvent, handler, delegationFn) {
     const delegation = typeof handler === 'string';
-    const originalHandler = delegation ? delegationFn : handler; // allow to get the native events from namespaced events ('click.bs.button' --> 'click')
+    const originalHandler = delegation ? delegationFn : handler; // allow to get the native events from namespaced events ('click.un.button' --> 'click')
 
     let typeEvent = originalTypeEvent.replace(stripNameRegex, '');
     const custom = customEvents[typeEvent];
@@ -3227,7 +3227,7 @@
     dispose() {
       clearTimeout(this._timeout);
       EventHandler.off(this._element, this.constructor.EVENT_KEY);
-      EventHandler.off(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.bs.modal', this._hideModalHandler);
+      EventHandler.off(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.un.modal', this._hideModalHandler);
 
       if (this.tip && this.tip.parentNode) {
         this.tip.parentNode.removeChild(this.tip);
@@ -3540,7 +3540,7 @@
         }
       };
 
-      EventHandler.on(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.bs.modal', this._hideModalHandler);
+      EventHandler.on(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.un.modal', this._hideModalHandler);
 
       if (this.config.selector) {
         this.config = { ...this.config,
