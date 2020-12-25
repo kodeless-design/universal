@@ -74,7 +74,7 @@
   };
 
   var getSelector = function getSelector(element) {
-    var selector = element.getAttribute('data-bs-target');
+    var selector = element.getAttribute('data-un-target');
 
     if (!selector || selector === '#') {
       var hrefAttr = element.getAttribute('href');
@@ -172,7 +172,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
       return jQuery;
     }
 
@@ -310,8 +310,8 @@
   var SELECTOR_ITEM_IMG = '.carousel-item img';
   var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
   var SELECTOR_INDICATORS = '.carousel-indicators';
-  var SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
-  var SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
+  var SELECTOR_DATA_SLIDE = '[data-un-slide], [data-un-slide-to]';
+  var SELECTOR_DATA_RIDE = '[data-un-ride="carousel"]';
   var POINTER_TYPE_TOUCH = 'touch';
   var POINTER_TYPE_PEN = 'pen';
   /**
@@ -658,7 +658,7 @@
         return;
       }
 
-      var elementInterval = Number.parseInt(element.getAttribute('data-bs-interval'), 10);
+      var elementInterval = Number.parseInt(element.getAttribute('data-un-interval'), 10);
 
       if (elementInterval) {
         this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
@@ -793,7 +793,7 @@
 
       var config = _extends({}, Manipulator__default['default'].getDataAttributes(target), Manipulator__default['default'].getDataAttributes(this));
 
-      var slideIndex = this.getAttribute('data-bs-slide-to');
+      var slideIndex = this.getAttribute('data-un-slide-to');
 
       if (slideIndex) {
         config.interval = false;

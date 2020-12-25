@@ -47,7 +47,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
       return jQuery;
     }
 
@@ -134,7 +134,7 @@
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
   var CLASS_NAME_ACTIVE = 'active';
-  var SELECTOR_DATA_TOGGLE = '[data-bs-toggle="button"]';
+  var SELECTOR_DATA_TOGGLE = '[data-un-toggle="button"]';
   var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
   /**
    * ------------------------------------------------------------------------

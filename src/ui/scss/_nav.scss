@@ -39,12 +39,13 @@
 //
 
 .nav-tabs {
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  background-color: $nav-tabs-background-color;
+  @include border-radius($border-radius);
 
   .nav-link {
+    color: $body-color;
     margin-bottom: -$nav-tabs-border-width;
-    border: $nav-tabs-border-width solid transparent;
-    @include border-top-radius($nav-tabs-border-radius);
+    @include border-radius($nav-tabs-border-radius);
 
     &:hover,
     &:focus {

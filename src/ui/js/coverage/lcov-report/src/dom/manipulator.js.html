@@ -250,11 +250,11 @@ function normalizeDataKey(key) {
 &nbsp;
 const Manipulator = {
   setDataAttribute(element, key, value) {
-    element.setAttribute(`data-bs-${normalizeDataKey(key)}`, value)
+    element.setAttribute(`data-un-${normalizeDataKey(key)}`, value)
   },
 &nbsp;
   removeDataAttribute(element, key) {
-    element.removeAttribute(`data-bs-${normalizeDataKey(key)}`)
+    element.removeAttribute(`data-un-${normalizeDataKey(key)}`)
   },
 &nbsp;
   getDataAttributes(element) {
@@ -276,7 +276,7 @@ const Manipulator = {
   },
 &nbsp;
   getDataAttribute(element, key) {
-    return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`))
+    return normalizeData(element.getAttribute(`data-un-${normalizeDataKey(key)}`))
   },
 &nbsp;
   offset(element) {

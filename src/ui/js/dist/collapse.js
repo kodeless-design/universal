@@ -74,7 +74,7 @@
   };
 
   var getSelector = function getSelector(element) {
-    var selector = element.getAttribute('data-bs-target');
+    var selector = element.getAttribute('data-un-target');
 
     if (!selector || selector === '#') {
       var hrefAttr = element.getAttribute('href');
@@ -168,7 +168,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
       return jQuery;
     }
 
@@ -274,7 +274,7 @@
   var WIDTH = 'width';
   var HEIGHT = 'height';
   var SELECTOR_ACTIVES = '.show, .collapsing';
-  var SELECTOR_DATA_TOGGLE = '[data-bs-toggle="collapse"]';
+  var SELECTOR_DATA_TOGGLE = '[data-un-toggle="collapse"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -290,7 +290,7 @@
       _this = _BaseComponent.call(this, element) || this;
       _this._isTransitioning = false;
       _this._config = _this._getConfig(config);
-      _this._triggerArray = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE + "[href=\"#" + element.id + "\"]," + (SELECTOR_DATA_TOGGLE + "[data-bs-target=\"#" + element.id + "\"]"));
+      _this._triggerArray = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE + "[href=\"#" + element.id + "\"]," + (SELECTOR_DATA_TOGGLE + "[data-un-target=\"#" + element.id + "\"]"));
       var toggleList = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
 
       for (var i = 0, len = toggleList.length; i < len; i++) {
@@ -345,7 +345,7 @@
       if (this._parent) {
         actives = SelectorEngine__default['default'].find(SELECTOR_ACTIVES, this._parent).filter(function (elem) {
           if (typeof _this2._config.parent === 'string') {
-            return elem.getAttribute('data-bs-parent') === _this2._config.parent;
+            return elem.getAttribute('data-un-parent') === _this2._config.parent;
           }
 
           return elem.classList.contains(CLASS_NAME_COLLAPSE);
@@ -518,7 +518,7 @@
         parent = SelectorEngine__default['default'].findOne(parent);
       }
 
-      var selector = SELECTOR_DATA_TOGGLE + "[data-bs-parent=\"" + parent + "\"]";
+      var selector = SELECTOR_DATA_TOGGLE + "[data-un-parent=\"" + parent + "\"]";
       SelectorEngine__default['default'].find(selector, parent).forEach(function (element) {
         var selected = getElementFromSelector(element);
 

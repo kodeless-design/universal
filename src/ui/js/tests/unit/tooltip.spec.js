@@ -64,7 +64,7 @@ describe('Tooltip', () => {
 
   describe('constructor', () => {
     it('should not take care of disallowed data attributes', () => {
-      fixtureEl.innerHTML = '<a href="#" rel="tooltip" data-bs-sanitize="false" title="Another tooltip">'
+      fixtureEl.innerHTML = '<a href="#" rel="tooltip" data-un-sanitize="false" title="Another tooltip">'
 
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
@@ -635,7 +635,7 @@ describe('Tooltip', () => {
     })
 
     it('should show a tooltip with custom class provided in data attributes', done => {
-      fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip" data-bs-custom-class="custom-class">'
+      fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip" data-un-custom-class="custom-class">'
 
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)

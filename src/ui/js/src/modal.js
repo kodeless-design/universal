@@ -67,8 +67,8 @@ const CLASS_NAME_STATIC = 'modal-static'
 
 const SELECTOR_DIALOG = '.modal-dialog'
 const SELECTOR_MODAL_BODY = '.modal-body'
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]'
-const SELECTOR_DATA_DISMISS = '[data-bs-dismiss="modal"]'
+const SELECTOR_DATA_TOGGLE = '[data-un-toggle="modal"]'
+const SELECTOR_DATA_DISMISS = '[data-un-dismiss="modal"]'
 const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
 const SELECTOR_STICKY_CONTENT = '.sticky-top'
 

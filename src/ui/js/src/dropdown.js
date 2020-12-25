@@ -58,7 +58,7 @@ const CLASS_NAME_DROPEND = 'dropend'
 const CLASS_NAME_DROPSTART = 'dropstart'
 const CLASS_NAME_NAVBAR = 'navbar'
 
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dropdown"]'
+const SELECTOR_DATA_TOGGLE = '[data-un-toggle="dropdown"]'
 const SELECTOR_FORM_CHILD = '.dropdown form'
 const SELECTOR_MENU = '.dropdown-menu'
 const SELECTOR_NAVBAR_NAV = '.navbar-nav'

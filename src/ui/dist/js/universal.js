@@ -104,7 +104,7 @@
   };
 
   var getSelector = function getSelector(element) {
-    var selector = element.getAttribute('data-bs-target');
+    var selector = element.getAttribute('data-un-target');
 
     if (!selector || selector === '#') {
       var hrefAttr = element.getAttribute('href');
@@ -239,7 +239,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
       return jQuery;
     }
 
@@ -667,7 +667,7 @@
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
-  var SELECTOR_DISMISS = '[data-bs-dismiss="alert"]';
+  var SELECTOR_DISMISS = '[data-un-dismiss="alert"]';
   var EVENT_CLOSE = "close" + EVENT_KEY;
   var EVENT_CLOSED = "closed" + EVENT_KEY;
   var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
@@ -800,7 +800,7 @@
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
   var CLASS_NAME_ACTIVE = 'active';
-  var SELECTOR_DATA_TOGGLE = '[data-bs-toggle="button"]';
+  var SELECTOR_DATA_TOGGLE = '[data-un-toggle="button"]';
   var EVENT_CLICK_DATA_API$1 = "click" + EVENT_KEY$1 + DATA_API_KEY$1;
   /**
    * ------------------------------------------------------------------------
@@ -909,10 +909,10 @@
 
   var Manipulator = {
     setDataAttribute: function setDataAttribute(element, key, value) {
-      element.setAttribute("data-bs-" + normalizeDataKey(key), value);
+      element.setAttribute("data-un-" + normalizeDataKey(key), value);
     },
     removeDataAttribute: function removeDataAttribute(element, key) {
-      element.removeAttribute("data-bs-" + normalizeDataKey(key));
+      element.removeAttribute("data-un-" + normalizeDataKey(key));
     },
     getDataAttributes: function getDataAttributes(element) {
       if (!element) {
@@ -930,7 +930,7 @@
       return attributes;
     },
     getDataAttribute: function getDataAttribute(element, key) {
-      return normalizeData(element.getAttribute("data-bs-" + normalizeDataKey(key)));
+      return normalizeData(element.getAttribute("data-un-" + normalizeDataKey(key)));
     },
     offset: function offset(element) {
       var rect = element.getBoundingClientRect();
@@ -1088,8 +1088,8 @@
   var SELECTOR_ITEM_IMG = '.carousel-item img';
   var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
   var SELECTOR_INDICATORS = '.carousel-indicators';
-  var SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
-  var SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
+  var SELECTOR_DATA_SLIDE = '[data-un-slide], [data-un-slide-to]';
+  var SELECTOR_DATA_RIDE = '[data-un-ride="carousel"]';
   var POINTER_TYPE_TOUCH = 'touch';
   var POINTER_TYPE_PEN = 'pen';
   /**
@@ -1436,7 +1436,7 @@
         return;
       }
 
-      var elementInterval = Number.parseInt(element.getAttribute('data-bs-interval'), 10);
+      var elementInterval = Number.parseInt(element.getAttribute('data-un-interval'), 10);
 
       if (elementInterval) {
         this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
@@ -1571,7 +1571,7 @@
 
       var config = _extends({}, Manipulator.getDataAttributes(target), Manipulator.getDataAttributes(this));
 
-      var slideIndex = this.getAttribute('data-bs-slide-to');
+      var slideIndex = this.getAttribute('data-un-slide-to');
 
       if (slideIndex) {
         config.interval = false;
@@ -1654,7 +1654,7 @@
   var WIDTH = 'width';
   var HEIGHT = 'height';
   var SELECTOR_ACTIVES = '.show, .collapsing';
-  var SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="collapse"]';
+  var SELECTOR_DATA_TOGGLE$1 = '[data-un-toggle="collapse"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -1670,7 +1670,7 @@
       _this = _BaseComponent.call(this, element) || this;
       _this._isTransitioning = false;
       _this._config = _this._getConfig(config);
-      _this._triggerArray = SelectorEngine.find(SELECTOR_DATA_TOGGLE$1 + "[href=\"#" + element.id + "\"]," + (SELECTOR_DATA_TOGGLE$1 + "[data-bs-target=\"#" + element.id + "\"]"));
+      _this._triggerArray = SelectorEngine.find(SELECTOR_DATA_TOGGLE$1 + "[href=\"#" + element.id + "\"]," + (SELECTOR_DATA_TOGGLE$1 + "[data-un-target=\"#" + element.id + "\"]"));
       var toggleList = SelectorEngine.find(SELECTOR_DATA_TOGGLE$1);
 
       for (var i = 0, len = toggleList.length; i < len; i++) {
@@ -1725,7 +1725,7 @@
       if (this._parent) {
         actives = SelectorEngine.find(SELECTOR_ACTIVES, this._parent).filter(function (elem) {
           if (typeof _this2._config.parent === 'string') {
-            return elem.getAttribute('data-bs-parent') === _this2._config.parent;
+            return elem.getAttribute('data-un-parent') === _this2._config.parent;
           }
 
           return elem.classList.contains(CLASS_NAME_COLLAPSE);
@@ -1898,7 +1898,7 @@
         parent = SelectorEngine.findOne(parent);
       }
 
-      var selector = SELECTOR_DATA_TOGGLE$1 + "[data-bs-parent=\"" + parent + "\"]";
+      var selector = SELECTOR_DATA_TOGGLE$1 + "[data-un-parent=\"" + parent + "\"]";
       SelectorEngine.find(selector, parent).forEach(function (element) {
         var selected = getElementFromSelector(element);
 
@@ -2043,7 +2043,7 @@
   var CLASS_NAME_DROPEND = 'dropend';
   var CLASS_NAME_DROPSTART = 'dropstart';
   var CLASS_NAME_NAVBAR = 'navbar';
-  var SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="dropdown"]';
+  var SELECTOR_DATA_TOGGLE$2 = '[data-un-toggle="dropdown"]';
   var SELECTOR_FORM_CHILD = '.dropdown form';
   var SELECTOR_MENU = '.dropdown-menu';
   var SELECTOR_NAVBAR_NAV = '.navbar-nav';
@@ -2526,8 +2526,8 @@
   var CLASS_NAME_STATIC = 'modal-static';
   var SELECTOR_DIALOG = '.modal-dialog';
   var SELECTOR_MODAL_BODY = '.modal-body';
-  var SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="modal"]';
-  var SELECTOR_DATA_DISMISS = '[data-bs-dismiss="modal"]';
+  var SELECTOR_DATA_TOGGLE$3 = '[data-un-toggle="modal"]';
+  var SELECTOR_DATA_DISMISS = '[data-un-dismiss="modal"]';
   var SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
   var SELECTOR_STICKY_CONTENT = '.sticky-top';
   /**
@@ -3614,7 +3614,7 @@
     };
 
     _proto.getTitle = function getTitle() {
-      var title = this._element.getAttribute('data-bs-original-title');
+      var title = this._element.getAttribute('data-un-original-title');
 
       if (!title) {
         title = typeof this.config.title === 'function' ? this.config.title.call(this._element) : this.config.title;
@@ -3736,10 +3736,10 @@
     _proto._fixTitle = function _fixTitle() {
       var title = this._element.getAttribute('title');
 
-      var originalTitleType = typeof this._element.getAttribute('data-bs-original-title');
+      var originalTitleType = typeof this._element.getAttribute('data-un-original-title');
 
       if (title || originalTitleType !== 'string') {
-        this._element.setAttribute('data-bs-original-title', title || '');
+        this._element.setAttribute('data-un-original-title', title || '');
 
         if (title && !this._element.getAttribute('aria-label') && !this._element.textContent) {
           this._element.setAttribute('aria-label', title);
@@ -4052,7 +4052,7 @@
     };
 
     _proto._getContent = function _getContent() {
-      return this._element.getAttribute('data-bs-content') || this.config.content;
+      return this._element.getAttribute('data-un-content') || this.config.content;
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {
@@ -4164,7 +4164,7 @@
   var EVENT_LOAD_DATA_API$1 = "load" + EVENT_KEY$8 + DATA_API_KEY$6;
   var CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
   var CLASS_NAME_ACTIVE$2 = 'active';
-  var SELECTOR_DATA_SPY = '[data-bs-spy="scroll"]';
+  var SELECTOR_DATA_SPY = '[data-un-spy="scroll"]';
   var SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
   var SELECTOR_NAV_LINKS = '.nav-link';
   var SELECTOR_NAV_ITEMS = '.nav-item';
@@ -4330,7 +4330,7 @@
       this._clear();
 
       var queries = this._selector.split(',').map(function (selector) {
-        return selector + "[data-bs-target=\"" + target + "\"]," + selector + "[href=\"" + target + "\"]";
+        return selector + "[data-un-target=\"" + target + "\"]," + selector + "[href=\"" + target + "\"]";
       });
 
       var link = SelectorEngine.findOne(queries.join(','));
@@ -4449,7 +4449,7 @@
   var SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
   var SELECTOR_ACTIVE$1 = '.active';
   var SELECTOR_ACTIVE_UL = ':scope > li > .active';
-  var SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]';
+  var SELECTOR_DATA_TOGGLE$4 = '[data-un-toggle="tab"], [data-un-toggle="pill"], [data-un-toggle="list"]';
   var SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
   var SELECTOR_DROPDOWN_ACTIVE_CHILD = ':scope > .dropdown-menu .active';
   /**
@@ -4654,7 +4654,7 @@
     autohide: true,
     delay: 5000
   };
-  var SELECTOR_DATA_DISMISS$1 = '[data-bs-dismiss="toast"]';
+  var SELECTOR_DATA_DISMISS$1 = '[data-un-dismiss="toast"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition

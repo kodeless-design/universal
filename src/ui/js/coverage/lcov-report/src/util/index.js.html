@@ -540,7 +540,7 @@ const getUID = prefix =&gt; {
 }
 &nbsp;
 const getSelector = element =&gt; {
-  let selector = element.getAttribute('data-bs-target')
+  let selector = element.getAttribute('data-un-target')
 &nbsp;
   if (!selector || selector === '#') {
     const hrefAttr = element.getAttribute('href')
@@ -678,7 +678,7 @@ const reflow = element =&gt; element.offsetHeight
 const getjQuery = () =&gt; {
   const { jQuery } = window
 &nbsp;
-  if (jQuery &amp;&amp; !document.body.hasAttribute('data-bs-no-jquery')) {
+  if (jQuery &amp;&amp; !document.body.hasAttribute('data-un-no-jquery')) {
     return jQuery
   }
 &nbsp;

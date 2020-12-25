@@ -141,7 +141,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
       return jQuery;
     }
 
@@ -245,7 +245,7 @@
     autohide: true,
     delay: 5000
   };
-  var SELECTOR_DATA_DISMISS = '[data-bs-dismiss="toast"]';
+  var SELECTOR_DATA_DISMISS = '[data-un-dismiss="toast"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition

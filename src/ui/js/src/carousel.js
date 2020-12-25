@@ -90,8 +90,8 @@ const SELECTOR_ITEM = '.carousel-item'
 const SELECTOR_ITEM_IMG = '.carousel-item img'
 const SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev'
 const SELECTOR_INDICATORS = '.carousel-indicators'
-const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
-const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
+const SELECTOR_DATA_SLIDE = '[data-un-slide], [data-un-slide-to]'
+const SELECTOR_DATA_RIDE = '[data-un-ride="carousel"]'
 
 const POINTER_TYPE_TOUCH = 'touch'
 const POINTER_TYPE_PEN = 'pen'
@@ -428,7 +428,7 @@ class Carousel extends BaseComponent {
       return
     }
 
-    const elementInterval = Number.parseInt(element.getAttribute('data-bs-interval'), 10)
+    const elementInterval = Number.parseInt(element.getAttribute('data-un-interval'), 10)
 
     if (elementInterval) {
       this._config.defaultInterval = this._config.defaultInterval || this._config.interval
@@ -574,7 +574,7 @@ class Carousel extends BaseComponent {
       ...Manipulator.getDataAttributes(target),
       ...Manipulator.getDataAttributes(this)
     }
-    const slideIndex = this.getAttribute('data-bs-slide-to')
+    const slideIndex = this.getAttribute('data-un-slide-to')
 
     if (slideIndex) {
       config.interval = false

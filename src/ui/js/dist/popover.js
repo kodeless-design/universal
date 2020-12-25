@@ -66,7 +66,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
       return jQuery;
     }
 
@@ -181,7 +181,7 @@
     };
 
     _proto._getContent = function _getContent() {
-      return this._element.getAttribute('data-bs-content') || this.config.content;
+      return this._element.getAttribute('data-un-content') || this.config.content;
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {

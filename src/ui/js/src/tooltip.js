@@ -440,7 +440,7 @@ class Tooltip extends BaseComponent {
   }
 
   getTitle() {
-    let title = this._element.getAttribute('data-bs-original-title')
+    let title = this._element.getAttribute('data-un-original-title')
 
     if (!title) {
       title = typeof this.config.title === 'function' ?
@@ -569,10 +569,10 @@ class Tooltip extends BaseComponent {
 
   _fixTitle() {
     const title = this._element.getAttribute('title')
-    const originalTitleType = typeof this._element.getAttribute('data-bs-original-title')
+    const originalTitleType = typeof this._element.getAttribute('data-un-original-title')
 
     if (title || originalTitleType !== 'string') {
-      this._element.setAttribute('data-bs-original-title', title || '')
+      this._element.setAttribute('data-un-original-title', title || '')
       if (title && !this._element.getAttribute('aria-label') && !this._element.textContent) {
         this._element.setAttribute('aria-label', title)
       }

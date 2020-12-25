@@ -651,7 +651,7 @@ describe('ScrollSpy', () => {
 
   describe('event handler', () => {
     it('should create scrollspy on window load event', () => {
-      fixtureEl.innerHTML = '<div data-bs-spy="scroll"></div>'
+      fixtureEl.innerHTML = '<div data-un-spy="scroll"></div>'
 
       const scrollSpyEl = fixtureEl.querySelector('div')
 

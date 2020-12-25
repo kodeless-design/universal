@@ -50,7 +50,7 @@ const Default = {
   delay: 5000
 }
 
-const SELECTOR_DATA_DISMISS = '[data-bs-dismiss="toast"]'
+const SELECTOR_DATA_DISMISS = '[data-un-dismiss="toast"]'
 
 /**
  * ------------------------------------------------------------------------

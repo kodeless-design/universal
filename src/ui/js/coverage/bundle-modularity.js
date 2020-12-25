@@ -1848,7 +1848,7 @@
 	      var _window = window,
 	          jQuery = _window.jQuery;
 
-	      if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+	      if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
 	        return jQuery;
 	      }
 
@@ -2179,10 +2179,10 @@
 
 	    var Manipulator = {
 	      setDataAttribute: function setDataAttribute(element, key, value) {
-	        element.setAttribute("data-bs-" + normalizeDataKey(key), value);
+	        element.setAttribute("data-un-" + normalizeDataKey(key), value);
 	      },
 	      removeDataAttribute: function removeDataAttribute(element, key) {
-	        element.removeAttribute("data-bs-" + normalizeDataKey(key));
+	        element.removeAttribute("data-un-" + normalizeDataKey(key));
 	      },
 	      getDataAttributes: function getDataAttributes(element) {
 	        if (!element) {
@@ -2200,7 +2200,7 @@
 	        return attributes;
 	      },
 	      getDataAttribute: function getDataAttribute(element, key) {
-	        return normalizeData(element.getAttribute("data-bs-" + normalizeDataKey(key)));
+	        return normalizeData(element.getAttribute("data-un-" + normalizeDataKey(key)));
 	      },
 	      offset: function offset(element) {
 	        var rect = element.getBoundingClientRect();
@@ -2527,7 +2527,7 @@
 	      var _window = window,
 	          jQuery = _window.jQuery;
 
-	      if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+	      if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
 	        return jQuery;
 	      }
 
@@ -3120,7 +3120,7 @@
 	      };
 
 	      _proto.getTitle = function getTitle() {
-	        var title = this._element.getAttribute('data-bs-original-title');
+	        var title = this._element.getAttribute('data-un-original-title');
 
 	        if (!title) {
 	          title = typeof this.config.title === 'function' ? this.config.title.call(this._element) : this.config.title;
@@ -3242,10 +3242,10 @@
 	      _proto._fixTitle = function _fixTitle() {
 	        var title = this._element.getAttribute('title');
 
-	        var originalTitleType = typeof this._element.getAttribute('data-bs-original-title');
+	        var originalTitleType = typeof this._element.getAttribute('data-un-original-title');
 
 	        if (title || originalTitleType !== 'string') {
-	          this._element.setAttribute('data-bs-original-title', title || '');
+	          this._element.setAttribute('data-un-original-title', title || '');
 
 	          if (title && !this._element.getAttribute('aria-label') && !this._element.textContent) {
 	            this._element.setAttribute('aria-label', title);
@@ -3565,7 +3565,7 @@
 	    };
 
 	    var getSelector = function getSelector(element) {
-	      var selector = element.getAttribute('data-bs-target');
+	      var selector = element.getAttribute('data-un-target');
 
 	      if (!selector || selector === '#') {
 	        var hrefAttr = element.getAttribute('href');
@@ -3663,7 +3663,7 @@
 	      var _window = window,
 	          jQuery = _window.jQuery;
 
-	      if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+	      if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
 	        return jQuery;
 	      }
 
@@ -3801,8 +3801,8 @@
 	    var SELECTOR_ITEM_IMG = '.carousel-item img';
 	    var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
 	    var SELECTOR_INDICATORS = '.carousel-indicators';
-	    var SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
-	    var SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
+	    var SELECTOR_DATA_SLIDE = '[data-un-slide], [data-un-slide-to]';
+	    var SELECTOR_DATA_RIDE = '[data-un-ride="carousel"]';
 	    var POINTER_TYPE_TOUCH = 'touch';
 	    var POINTER_TYPE_PEN = 'pen';
 	    /**
@@ -4148,7 +4148,7 @@
 	          return;
 	        }
 
-	        var elementInterval = Number.parseInt(element.getAttribute('data-bs-interval'), 10);
+	        var elementInterval = Number.parseInt(element.getAttribute('data-un-interval'), 10);
 
 	        if (elementInterval) {
 	          this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
@@ -4283,7 +4283,7 @@
 
 	        var config = _extends({}, Manipulator__default['default'].getDataAttributes(target), Manipulator__default['default'].getDataAttributes(this));
 
-	        var slideIndex = this.getAttribute('data-bs-slide-to');
+	        var slideIndex = this.getAttribute('data-un-slide-to');
 
 	        if (slideIndex) {
 	          config.interval = false;
@@ -4342,7 +4342,7 @@
 	window.addEventListener('load', function () {
 	  var _ref;
 
-	  (_ref = []).concat.apply(_ref, document.querySelectorAll('[data-bs-toggle="tooltip"]')).map(function (tooltipNode) {
+	  (_ref = []).concat.apply(_ref, document.querySelectorAll('[data-un-toggle="tooltip"]')).map(function (tooltipNode) {
 	    return new Tooltip(tooltipNode);
 	  });
 	});

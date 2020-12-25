@@ -201,7 +201,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-un-no-jquery')) {
       return jQuery;
     }
 
@@ -793,7 +793,7 @@
     };
 
     _proto.getTitle = function getTitle() {
-      var title = this._element.getAttribute('data-bs-original-title');
+      var title = this._element.getAttribute('data-un-original-title');
 
       if (!title) {
         title = typeof this.config.title === 'function' ? this.config.title.call(this._element) : this.config.title;
@@ -915,10 +915,10 @@
     _proto._fixTitle = function _fixTitle() {
       var title = this._element.getAttribute('title');
 
-      var originalTitleType = typeof this._element.getAttribute('data-bs-original-title');
+      var originalTitleType = typeof this._element.getAttribute('data-un-original-title');
 
       if (title || originalTitleType !== 'string') {
-        this._element.setAttribute('data-bs-original-title', title || '');
+        this._element.setAttribute('data-un-original-title', title || '');
 
         if (title && !this._element.getAttribute('aria-label') && !this._element.textContent) {
           this._element.setAttribute('aria-label', title);

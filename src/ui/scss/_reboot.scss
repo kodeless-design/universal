@@ -140,13 +140,13 @@ p {
 
 // Abbreviations
 //
-// 1. Duplicate behavior to the data-bs-* attribute for our tooltip plugin
+// 1. Duplicate behavior to the data-un-* attribute for our tooltip plugin
 // 2. Add the correct text decoration in Chrome, Edge, Opera, and Safari.
 // 3. Add explicit cursor to indicate changed behavior.
 // 4. Prevent the text-decoration to be skipped.
 
 abbr[title],
-abbr[data-bs-original-title] {
+abbr[data-un-original-title] {
   // 1
   text-decoration: underline; // 2
   text-decoration: underline dotted; // 2

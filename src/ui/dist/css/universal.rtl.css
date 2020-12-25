@@ -41,7 +41,7 @@
 body {
   margin: 0;
   font-family: var(--un-font-sans-serif);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.5;
   color: #212529;
@@ -74,47 +74,47 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.3625rem + 1.35vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.315rem + 0.78vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.29125rem + 0.495vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.75rem;
+    font-size: 1.6625rem;
   }
 }
 
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.2675rem + 0.21vw);
 }
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 1.5rem;
+    font-size: 1.425rem;
   }
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 p {
@@ -123,7 +123,7 @@ p {
 }
 
 abbr[title],
-abbr[data-bs-original-title] {
+abbr[data-un-original-title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
@@ -250,7 +250,7 @@ kbd {
   font-size: 0.875em;
   color: #fff;
   background-color: #212529;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
 }
 kbd kbd {
   padding: 0;
@@ -1013,7 +1013,7 @@ progress {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
   font-weight: 300;
 }
 
@@ -1107,7 +1107,7 @@ progress {
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
 }
 .blockquote > :last-child {
   margin-bottom: 0;
@@ -1132,7 +1132,7 @@ progress {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
   max-width: 100%;
   height: auto;
 }
@@ -2697,13 +2697,13 @@ progress {
 .col-form-label-lg {
   padding-top: calc(1rem + 1px);
   padding-bottom: calc(1rem + 1px);
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
 }
 
 .col-form-label-sm {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
 }
 
 .form-text {
@@ -2716,7 +2716,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.75rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.5;
   color: #212529;
@@ -2726,7 +2726,7 @@ progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2834,8 +2834,8 @@ progress {
 .form-control-sm {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 0.5rem;
-  font-size: 0.875rem;
-  border-radius: 0.2rem;
+  font-size: 0.83125rem;
+  border-radius: 0.4rem;
 }
 .form-control-sm::file-selector-button {
   padding: 0.5rem 0.5rem;
@@ -2853,8 +2853,8 @@ progress {
 .form-control-lg {
   min-height: calc(1.5em + 2rem + 2px);
   padding: 1rem 1rem;
-  font-size: 1.25rem;
-  border-radius: 0.3rem;
+  font-size: 1.1875rem;
+  border-radius: 0.5rem;
 }
 .form-control-lg::file-selector-button {
   padding: 1rem 1rem;
@@ -2889,18 +2889,18 @@ textarea.form-control-lg {
 }
 .form-control-color::-moz-color-swatch {
   height: 1.5em;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 .form-control-color::-webkit-color-swatch {
   height: 1.5em;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .form-select {
   display: block;
   width: 100%;
   padding: 0.75rem 0.75rem 0.75rem 1.75rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.5;
   color: #212529;
@@ -2910,7 +2910,7 @@ textarea.form-control-lg {
   background-position: left 0.75rem center;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2937,19 +2937,19 @@ textarea.form-control-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-right: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
 }
 
 .form-select-lg {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
 }
 
 .form-check {
   display: block;
-  min-height: 1.5rem;
+  min-height: 1.425rem;
   padding-right: 1.5em;
   margin-bottom: 0.125rem;
 }
@@ -3236,7 +3236,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   padding: 0.75rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.5;
   color: #212529;
@@ -3244,7 +3244,7 @@ textarea.form-control-lg {
   white-space: nowrap;
   background-color: #e9ecef;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .input-group-lg > .form-control,
@@ -3252,8 +3252,8 @@ textarea.form-control-lg {
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
   padding: 1rem 1rem;
-  font-size: 1.25rem;
-  border-radius: 0.3rem;
+  font-size: 1.1875rem;
+  border-radius: 0.5rem;
 }
 
 .input-group-sm > .form-control,
@@ -3261,8 +3261,8 @@ textarea.form-control-lg {
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn {
   padding: 0.5rem 0.5rem;
-  font-size: 0.875rem;
-  border-radius: 0.2rem;
+  font-size: 0.83125rem;
+  border-radius: 0.4rem;
 }
 
 .input-group-lg > .form-select,
@@ -3302,10 +3302,10 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
   color: #fff;
   background-color: rgba(25, 135, 84, 0.9);
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .was-validated :valid ~ .valid-feedback,
@@ -3378,10 +3378,10 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
   color: #fff;
   background-color: rgba(220, 53, 69, 0.9);
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .was-validated :invalid ~ .invalid-feedback,
@@ -3452,9 +3452,9 @@ textarea.form-control-lg {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.75rem 0.75rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  border-radius: 0.3rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3928,14 +3928,14 @@ textarea.form-control-lg {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 1rem 1rem;
-  font-size: 1.25rem;
-  border-radius: 0.3rem;
+  font-size: 1.1875rem;
+  border-radius: 0.5rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.5rem 0.5rem;
-  font-size: 0.875rem;
-  border-radius: 0.2rem;
+  font-size: 0.83125rem;
+  border-radius: 0.4rem;
 }
 
 .fade {
@@ -3998,14 +3998,14 @@ textarea.form-control-lg {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #212529;
   text-align: right;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 .dropdown-menu[style] {
   right: auto !important;
@@ -4207,7 +4207,7 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
   color: #6c757d;
   white-space: nowrap;
 }
@@ -4299,8 +4299,8 @@ textarea.form-control-lg {
 }
 
 .dropdown-toggle-split {
-  padding-left: 0.5625rem;
-  padding-right: 0.5625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
   margin-right: 0;
@@ -4353,7 +4353,7 @@ textarea.form-control-lg {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -4369,13 +4369,13 @@ textarea.form-control-lg {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  background-color: #dee2e6;
+  border-radius: 0.3rem;
 }
 .nav-tabs .nav-link {
+  color: #212529;
   margin-bottom: -1px;
-  border: 1px solid transparent;
-  border-top-right-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
@@ -4387,7 +4387,7 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #7c18d3;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -4398,7 +4398,7 @@ textarea.form-control-lg {
 }
 
 .nav-pills .nav-link {
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -4448,10 +4448,10 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.571875rem;
+  padding-bottom: 0.571875rem;
   margin-left: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -4471,8 +4471,8 @@ textarea.form-control-lg {
 }
 
 .navbar-text {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .navbar-collapse {
@@ -4482,11 +4482,11 @@ textarea.form-control-lg {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
   transition: box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4722,7 +4722,7 @@ textarea.form-control-lg {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 .card > hr {
   margin-left: 0;
@@ -4734,13 +4734,13 @@ textarea.form-control-lg {
 }
 .card > .list-group:first-child {
   border-top-width: 0;
-  border-top-right-radius: calc(0.25rem - 1px);
-  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  border-top-left-radius: calc(0.3rem - 1px);
 }
 .card > .list-group:last-child {
   border-bottom-width: 0;
-  border-bottom-left-radius: calc(0.25rem - 1px);
-  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+  border-bottom-right-radius: calc(0.3rem - 1px);
 }
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
@@ -4779,7 +4779,7 @@ textarea.form-control-lg {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-radius: calc(0.3rem - 1px) calc(0.3rem - 1px) 0 0;
 }
 
 .card-footer {
@@ -4788,7 +4788,7 @@ textarea.form-control-lg {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
-  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+  border-radius: 0 0 calc(0.3rem - 1px) calc(0.3rem - 1px);
 }
 
 .card-header-tabs {
@@ -4810,7 +4810,7 @@ textarea.form-control-lg {
   bottom: 0;
   right: 0;
   padding: 1rem;
-  border-radius: calc(0.25rem - 1px);
+  border-radius: calc(0.3rem - 1px);
 }
 
 .card-img,
@@ -4821,14 +4821,14 @@ textarea.form-control-lg {
 
 .card-img,
 .card-img-top {
-  border-top-right-radius: calc(0.25rem - 1px);
-  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  border-top-left-radius: calc(0.3rem - 1px);
 }
 
 .card-img,
 .card-img-bottom {
-  border-bottom-left-radius: calc(0.25rem - 1px);
-  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+  border-bottom-right-radius: calc(0.3rem - 1px);
 }
 
 .card-group > .card {
@@ -4879,7 +4879,7 @@ textarea.form-control-lg {
   align-items: center;
   width: 100%;
   padding: 1rem 1.25rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #212529;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -4934,18 +4934,18 @@ textarea.form-control-lg {
 }
 
 .accordion-item:first-of-type .accordion-button {
-  border-top-right-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
 }
 .accordion-item:last-of-type .accordion-button.collapsed {
   border-bottom-width: 1px;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 .accordion-item:last-of-type .accordion-collapse {
   border-bottom-width: 1px;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 
 .accordion-collapse {
@@ -5052,38 +5052,38 @@ textarea.form-control-lg {
 }
 
 .page-item:first-child .page-link {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-.page-item:last-child .page-link {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-.pagination-lg .page-link {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-}
-.pagination-lg .page-item:first-child .page-link {
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
 }
-.pagination-lg .page-item:last-child .page-link {
+.page-item:last-child .page-link {
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
 }
 
+.pagination-lg .page-link {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1875rem;
+}
+.pagination-lg .page-item:first-child .page-link {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.pagination-lg .page-item:last-child .page-link {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
 }
 .pagination-sm .page-item:first-child .page-link {
-  border-top-right-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
 }
 .pagination-sm .page-item:last-child .page-link {
-  border-top-left-radius: 0.2rem;
-  border-bottom-left-radius: 0.2rem;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
 }
 
 .badge {
@@ -5096,7 +5096,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 .badge:empty {
   display: none;
@@ -5112,7 +5112,7 @@ textarea.form-control-lg {
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .alert-heading {
@@ -5221,9 +5221,9 @@ textarea.form-control-lg {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.75rem;
+  font-size: 0.7125rem;
   background-color: #e9ecef;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .progress-bar {
@@ -5264,7 +5264,7 @@ textarea.form-control-lg {
   flex-direction: column;
   padding-right: 0;
   margin-bottom: 0;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .list-group-item-action {
@@ -5322,11 +5322,11 @@ textarea.form-control-lg {
   flex-direction: row;
 }
 .list-group-horizontal > .list-group-item:first-child {
-  border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.3rem;
   border-top-left-radius: 0;
 }
 .list-group-horizontal > .list-group-item:last-child {
-  border-top-left-radius: 0.25rem;
+  border-top-left-radius: 0.3rem;
   border-bottom-right-radius: 0;
 }
 .list-group-horizontal > .list-group-item.active {
@@ -5346,11 +5346,11 @@ textarea.form-control-lg {
     flex-direction: row;
   }
   .list-group-horizontal-sm > .list-group-item:first-child {
-    border-bottom-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.3rem;
     border-top-left-radius: 0;
   }
   .list-group-horizontal-sm > .list-group-item:last-child {
-    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 0.3rem;
     border-bottom-right-radius: 0;
   }
   .list-group-horizontal-sm > .list-group-item.active {
@@ -5370,11 +5370,11 @@ textarea.form-control-lg {
     flex-direction: row;
   }
   .list-group-horizontal-md > .list-group-item:first-child {
-    border-bottom-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.3rem;
     border-top-left-radius: 0;
   }
   .list-group-horizontal-md > .list-group-item:last-child {
-    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 0.3rem;
     border-bottom-right-radius: 0;
   }
   .list-group-horizontal-md > .list-group-item.active {
@@ -5394,11 +5394,11 @@ textarea.form-control-lg {
     flex-direction: row;
   }
   .list-group-horizontal-lg > .list-group-item:first-child {
-    border-bottom-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.3rem;
     border-top-left-radius: 0;
   }
   .list-group-horizontal-lg > .list-group-item:last-child {
-    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 0.3rem;
     border-bottom-right-radius: 0;
   }
   .list-group-horizontal-lg > .list-group-item.active {
@@ -5418,11 +5418,11 @@ textarea.form-control-lg {
     flex-direction: row;
   }
   .list-group-horizontal-xl > .list-group-item:first-child {
-    border-bottom-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.3rem;
     border-top-left-radius: 0;
   }
   .list-group-horizontal-xl > .list-group-item:last-child {
-    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 0.3rem;
     border-bottom-right-radius: 0;
   }
   .list-group-horizontal-xl > .list-group-item.active {
@@ -5442,11 +5442,11 @@ textarea.form-control-lg {
     flex-direction: row;
   }
   .list-group-horizontal-xxl > .list-group-item:first-child {
-    border-bottom-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.3rem;
     border-top-left-radius: 0;
   }
   .list-group-horizontal-xxl > .list-group-item:last-child {
-    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 0.3rem;
     border-bottom-right-radius: 0;
   }
   .list-group-horizontal-xxl > .list-group-item.active {
@@ -5591,7 +5591,7 @@ textarea.form-control-lg {
   color: #000;
   background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
   opacity: 0.5;
 }
 .btn-close:hover {
@@ -5625,7 +5625,7 @@ textarea.form-control-lg {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 .toast:not(.showing):not(.show) {
   opacity: 0;
@@ -5653,8 +5653,8 @@ textarea.form-control-lg {
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  border-top-right-radius: calc(0.25rem - 1px);
-  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  border-top-left-radius: calc(0.3rem - 1px);
 }
 .toast-header .btn-close {
   margin-left: -0.375rem;
@@ -5733,7 +5733,7 @@ textarea.form-control-lg {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: 0;
 }
 
@@ -5760,8 +5760,8 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
-  border-top-right-radius: calc(0.3rem - 1px);
-  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
+  border-top-left-radius: calc(0.5rem - 1px);
 }
 .modal-header .btn-close {
   padding: 0.5rem 0.5rem;
@@ -5787,8 +5787,8 @@ textarea.form-control-lg {
   justify-content: flex-end;
   padding: 0.75rem;
   border-top: 1px solid #dee2e6;
-  border-bottom-left-radius: calc(0.3rem - 1px);
-  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.5rem - 1px);
+  border-bottom-right-radius: calc(0.5rem - 1px);
 }
 .modal-footer > * {
   margin: 0.25rem;
@@ -5981,7 +5981,7 @@ textarea.form-control-lg {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -6059,7 +6059,7 @@ textarea.form-control-lg {
   color: #fff;
   text-align: center;
   background-color: #000;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
 }
 
 .popover {
@@ -6083,19 +6083,19 @@ textarea.form-control-lg {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.83125rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
 }
 .popover .popover-arrow {
   position: absolute;
   display: block;
   width: 1rem;
   height: 0.5rem;
-  margin: 0 0.3rem;
+  margin: 0 0.5rem;
 }
 .popover .popover-arrow::before, .popover .popover-arrow::after {
   position: absolute;
@@ -6129,7 +6129,7 @@ textarea.form-control-lg {
   right: calc(-0.5rem - 1px);
   width: 0.5rem;
   height: 1rem;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
 }
 .un-popover-end > .popover-arrow::before, .un-popover-auto[data-popper-placement^=right] > .popover-arrow::before {
   right: 0;
@@ -6176,7 +6176,7 @@ textarea.form-control-lg {
   left: calc(-0.5rem - 1px);
   width: 0.5rem;
   height: 1rem;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
 }
 .un-popover-start > .popover-arrow::before, .un-popover-auto[data-popper-placement^=left] > .popover-arrow::before {
   left: 0;
@@ -6192,11 +6192,11 @@ textarea.form-control-lg {
 .popover-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   background-color: #f0f0f0;
   border-bottom: 1px solid #d8d8d8;
-  border-top-right-radius: calc(0.3rem - 1px);
-  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
+  border-top-left-radius: calc(0.5rem - 1px);
 }
 .popover-header:empty {
   display: none;
@@ -7594,27 +7594,27 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: calc(1.3625rem + 1.35vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.315rem + 0.78vw) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: calc(1.29125rem + 0.495vw) !important;
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: calc(1.2675rem + 0.21vw) !important;
 }
 
 .fs-5 {
-  font-size: 1.25rem !important;
+  font-size: 1.1875rem !important;
 }
 
 .fs-6 {
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
 }
 
 .fst-italic {
@@ -7839,7 +7839,7 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 0.3rem !important;
 }
 
 .rounded-0 {
@@ -7847,15 +7847,15 @@ textarea.form-control-lg {
 }
 
 .rounded-1 {
-  border-radius: 0.2rem !important;
+  border-radius: 0.4rem !important;
 }
 
 .rounded-2 {
-  border-radius: 0.25rem !important;
+  border-radius: 0.3rem !important;
 }
 
 .rounded-3 {
-  border-radius: 0.3rem !important;
+  border-radius: 0.5rem !important;
 }
 
 .rounded-circle {
@@ -7867,23 +7867,23 @@ textarea.form-control-lg {
 }
 
 .rounded-top {
-  border-top-right-radius: 0.25rem !important;
-  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.3rem !important;
+  border-top-left-radius: 0.3rem !important;
 }
 
 .rounded-end {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.3rem !important;
+  border-bottom-left-radius: 0.3rem !important;
 }
 
 .rounded-bottom {
-  border-bottom-left-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.3rem !important;
+  border-bottom-right-radius: 0.3rem !important;
 }
 
 .rounded-start {
-  border-bottom-right-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.3rem !important;
+  border-top-right-radius: 0.3rem !important;
 }
 
 .visible {
@@ -11151,19 +11151,19 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important;
+    font-size: 2.375rem !important;
   }
 
   .fs-2 {
-    font-size: 2rem !important;
+    font-size: 1.9rem !important;
   }
 
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 1.6625rem !important;
   }
 
   .fs-4 {
-    font-size: 1.5rem !important;
+    font-size: 1.425rem !important;
   }
 }
 @media print {

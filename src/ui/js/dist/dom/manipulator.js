@@ -43,10 +43,10 @@
 
   var Manipulator = {
     setDataAttribute: function setDataAttribute(element, key, value) {
-      element.setAttribute("data-bs-" + normalizeDataKey(key), value);
+      element.setAttribute("data-un-" + normalizeDataKey(key), value);
     },
     removeDataAttribute: function removeDataAttribute(element, key) {
-      element.removeAttribute("data-bs-" + normalizeDataKey(key));
+      element.removeAttribute("data-un-" + normalizeDataKey(key));
     },
     getDataAttributes: function getDataAttributes(element) {
       if (!element) {
@@ -64,7 +64,7 @@
       return attributes;
     },
     getDataAttribute: function getDataAttribute(element, key) {
-      return normalizeData(element.getAttribute("data-bs-" + normalizeDataKey(key)));
+      return normalizeData(element.getAttribute("data-un-" + normalizeDataKey(key)));
     },
     offset: function offset(element) {
       var rect = element.getBoundingClientRect();
