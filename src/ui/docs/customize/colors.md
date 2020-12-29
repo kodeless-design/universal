@@ -1,10 +1,10 @@
 #### Color
 
-Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
+Universal is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
 
 ##### Theme colors
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstrap's `scss/_variables.scss` file.
+We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Universal's `scss/_variables.scss` file.
 <div class="row">
     <div class="col-md-4">
       <div class="p-3 mb-3 bg-primary text-white">Primary</div>
@@ -51,7 +51,7 @@ Check out [our Sass maps and loops docs]("#/docs/customize/sass.md) for how to m
 
 ##### All colors
 
-All Bootstrap colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a theme palette.
+All Universal colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a theme palette.
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
 
@@ -243,13 +243,13 @@ Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$the
 
 ##### Color Sass maps
 
-Bootstrap's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
+Universal's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
 
 - `$colors` lists all our available base (`500`) colors
 - `$theme-colors` lists all semantically named theme colors (shown below)
 - `$grays` lists all tints and shades of gray
 
-Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
+Within `scss/_variables.scss`, you'll find Universal's color variables and Sass map. Here's an example of the `$colors` Sass map:
 ``` css
 $colors: (
   "blue":       $blue,
