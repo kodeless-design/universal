@@ -78,7 +78,7 @@ Working with RTL, through our source Sass or compiled CSS, shouldn't be much dif
 
 ##### Customize from source
 
-When it comes to [customization](#/docs/customize/sass,md"), the preferred way is to take advantage of variables, maps, and mixins. This approach works the same for RTL, even if it's post-processed from the compiled files, thanks to [how RTLCSS works](https://rtlcss.com/learn/getting-started/why-rtlcss/).
+When it comes to [customization](#/docs/customize/sass.md"), the preferred way is to take advantage of variables, maps, and mixins. This approach works the same for RTL, even if it's post-processed from the compiled files, thanks to [how RTLCSS works](https://rtlcss.com/learn/getting-started/why-rtlcss/).
 
 ##### Custom RTL values
 

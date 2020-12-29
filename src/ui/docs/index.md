@@ -110,7 +110,7 @@ Universal requires the use of the HTML5 doctype. Without it, you'll see some fun
 </html>
 ```
 
-### Responsive Meta Tag
+##### Responsive Meta Tag
 
 Universal is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
 
@@ -120,7 +120,7 @@ Universal is developed *mobile first*, a strategy in which we optimize code for 
 
 You can see an example of this in action in the starter template.
 
-### Box-sizing
+##### Box-sizing
 
 For more straightforward sizing in CSS, we switch the global `box-sizing` value from `content-box` to `border-box`. This ensures `padding` does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.
 
@@ -136,6 +136,6 @@ With the above snippet, nested elements—including generated content via `::bef
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 
-### Reboot
+##### Reboot
 
 For improved cross-browser rendering, we use [Reboot](#/docs/content/reboot.md) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
