@@ -1,3 +1,820 @@
+.color-swatches {
+	margin: 0 -5px
+}
+
+.color-swatches .un-purple {
+	background-color: #563d7c
+}
+
+.color-swatches .un-purple-light {
+	background-color: #cbbde2
+}
+
+.color-swatches .un-purple-lighter {
+	background-color: #e5e1ea
+}
+
+.color-swatches .un-gray {
+	background-color: #f9f9f9
+}
+
+.color-swatch {
+	width: 4rem;
+	height: 4rem
+}
+
+@media (min-width: 768px) {
+	.color-swatch {
+		width: 6rem;
+		height: 6rem
+	}
+}
+
+.swatch-blue {
+	color: #fff;
+	background-color: #0d6efd
+}
+
+.swatch-blue::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "4.50" "\a" "4.50" "\a" "4.66";
+	background-color: #0d6efd;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-indigo {
+	color: #fff;
+	background-color: #6610f2
+}
+
+.swatch-indigo::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "7.18" "\a" "7.18" "\a" "2.92";
+	background-color: #6610f2;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-purple {
+	color: #fff;
+	background-color: #6f42c1
+}
+
+.swatch-purple::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "6.51" "\a" "6.51" "\a" "3.22";
+	background-color: #6f42c1;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-pink {
+	color: #fff;
+	background-color: #d63384
+}
+
+.swatch-pink::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "4.50" "\a" "4.50" "\a" "4.66";
+	background-color: #d63384;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-red {
+	color: #fff;
+	background-color: #dc3545
+}
+
+.swatch-red::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "4.52" "\a" "4.52" "\a" "4.63";
+	background-color: #dc3545;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-orange {
+	color: #000;
+	background-color: #fd7e14
+}
+
+.swatch-orange::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "8.17" "\a" "2.57" "\a" "8.17";
+	background-color: #fd7e14;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #000 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-yellow {
+	color: #000;
+	background-color: #ffc107
+}
+
+.swatch-yellow::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "12.8" "\a" "1.63" "\a" "12.8";
+	background-color: #ffc107;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #000 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-green {
+	color: #fff;
+	background-color: #198754
+}
+
+.swatch-green::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "4.53" "\a" "4.53" "\a" "4.63";
+	background-color: #198754;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-teal {
+	color: #000;
+	background-color: #20c997
+}
+
+.swatch-teal::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "9.86" "\a" "2.12" "\a" "9.86";
+	background-color: #20c997;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #000 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-cyan {
+	color: #000;
+	background-color: #0dcaf0
+}
+
+.swatch-cyan::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "10.7" "\a" "1.95" "\a" "10.7";
+	background-color: #0dcaf0;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #000 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-white {
+	color: #000;
+	background-color: #fff
+}
+
+.swatch-white::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "21" "\a" "1" "\a" "21";
+	background-color: #fff;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #000 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-gray {
+	color: #fff;
+	background-color: #6c757d
+}
+
+.swatch-gray::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "4.68" "\a" "4.68" "\a" "4.47";
+	background-color: #6c757d;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-gray-dark {
+	color: #fff;
+	background-color: #343a40
+}
+
+.swatch-gray-dark::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "11.5" "\a" "11.5" "\a" "1.82";
+	background-color: #343a40;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.swatch-gray-500 {
+	color: #000;
+	background-color: #adb5bd
+}
+
+.swatch-gray-500::after {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding-left: 1rem;
+	font-size: .75rem;
+	line-height: 1.35;
+	white-space: pre;
+	content: "10.1" "\a" "2.07" "\a" "10.1";
+	background-color: #adb5bd;
+	background-image: linear-gradient(to bottom, transparent 0.25rem, #000 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
+	background-repeat: no-repeat;
+	background-size: .5rem 100%
+}
+
+.un-blue-100 {
+	color: #000;
+	background-color: #cfe2ff
+}
+
+.un-blue-200 {
+	color: #000;
+	background-color: #9ec5fe
+}
+
+.un-blue-300 {
+	color: #000;
+	background-color: #6ea8fe
+}
+
+.un-blue-400 {
+	color: #000;
+	background-color: #3d8bfd
+}
+
+.un-blue-500 {
+	color: #fff;
+	background-color: #0d6efd
+}
+
+.un-blue-600 {
+	color: #fff;
+	background-color: #0a58ca
+}
+
+.un-blue-700 {
+	color: #fff;
+	background-color: #084298
+}
+
+.un-blue-800 {
+	color: #fff;
+	background-color: #052c65
+}
+
+.un-blue-900 {
+	color: #fff;
+	background-color: #031633
+}
+
+.un-indigo-100 {
+	color: #000;
+	background-color: #e0cffc
+}
+
+.un-indigo-200 {
+	color: #000;
+	background-color: #c29ffa
+}
+
+.un-indigo-300 {
+	color: #000;
+	background-color: #a370f7
+}
+
+.un-indigo-400 {
+	color: #fff;
+	background-color: #8540f5
+}
+
+.un-indigo-500 {
+	color: #fff;
+	background-color: #6610f2
+}
+
+.un-indigo-600 {
+	color: #fff;
+	background-color: #520dc2
+}
+
+.un-indigo-700 {
+	color: #fff;
+	background-color: #3d0a91
+}
+
+.un-indigo-800 {
+	color: #fff;
+	background-color: #290661
+}
+
+.un-indigo-900 {
+	color: #fff;
+	background-color: #140330
+}
+
+.un-purple-100 {
+	color: #000;
+	background-color: #e2d9f3
+}
+
+.un-purple-200 {
+	color: #000;
+	background-color: #c5b3e6
+}
+
+.un-purple-300 {
+	color: #000;
+	background-color: #a98eda
+}
+
+.un-purple-400 {
+	color: #000;
+	background-color: #8c68cd
+}
+
+.un-purple-500 {
+	color: #fff;
+	background-color: #6f42c1
+}
+
+.un-purple-600 {
+	color: #fff;
+	background-color: #59359a
+}
+
+.un-purple-700 {
+	color: #fff;
+	background-color: #432874
+}
+
+.un-purple-800 {
+	color: #fff;
+	background-color: #2c1a4d
+}
+
+.un-purple-900 {
+	color: #fff;
+	background-color: #160d27
+}
+
+.un-pink-100 {
+	color: #000;
+	background-color: #f7d6e6
+}
+
+.un-pink-200 {
+	color: #000;
+	background-color: #efadce
+}
+
+.un-pink-300 {
+	color: #000;
+	background-color: #e685b5
+}
+
+.un-pink-400 {
+	color: #000;
+	background-color: #de5c9d
+}
+
+.un-pink-500 {
+	color: #fff;
+	background-color: #d63384
+}
+
+.un-pink-600 {
+	color: #fff;
+	background-color: #ab296a
+}
+
+.un-pink-700 {
+	color: #fff;
+	background-color: #801f4f
+}
+
+.un-pink-800 {
+	color: #fff;
+	background-color: #561435
+}
+
+.un-pink-900 {
+	color: #fff;
+	background-color: #2b0a1a
+}
+
+.un-red-100 {
+	color: #000;
+	background-color: #f8d7da
+}
+
+.un-red-200 {
+	color: #000;
+	background-color: #f1aeb5
+}
+
+.un-red-300 {
+	color: #000;
+	background-color: #ea868f
+}
+
+.un-red-400 {
+	color: #000;
+	background-color: #e35d6a
+}
+
+.un-red-500 {
+	color: #fff;
+	background-color: #dc3545
+}
+
+.un-red-600 {
+	color: #fff;
+	background-color: #b02a37
+}
+
+.un-red-700 {
+	color: #fff;
+	background-color: #842029
+}
+
+.un-red-800 {
+	color: #fff;
+	background-color: #58151c
+}
+
+.un-red-900 {
+	color: #fff;
+	background-color: #2c0b0e
+}
+
+.un-orange-100 {
+	color: #000;
+	background-color: #ffe5d0
+}
+
+.un-orange-200 {
+	color: #000;
+	background-color: #fecba1
+}
+
+.un-orange-300 {
+	color: #000;
+	background-color: #feb272
+}
+
+.un-orange-400 {
+	color: #000;
+	background-color: #fd9843
+}
+
+.un-orange-500 {
+	color: #000;
+	background-color: #fd7e14
+}
+
+.un-orange-600 {
+	color: #000;
+	background-color: #ca6510
+}
+
+.un-orange-700 {
+	color: #fff;
+	background-color: #984c0c
+}
+
+.un-orange-800 {
+	color: #fff;
+	background-color: #653208
+}
+
+.un-orange-900 {
+	color: #fff;
+	background-color: #331904
+}
+
+.un-yellow-100 {
+	color: #000;
+	background-color: #fff3cd
+}
+
+.un-yellow-200 {
+	color: #000;
+	background-color: #ffe69c
+}
+
+.un-yellow-300 {
+	color: #000;
+	background-color: #ffda6a
+}
+
+.un-yellow-400 {
+	color: #000;
+	background-color: #ffcd39
+}
+
+.un-yellow-500 {
+	color: #000;
+	background-color: #ffc107
+}
+
+.un-yellow-600 {
+	color: #000;
+	background-color: #cc9a06
+}
+
+.un-yellow-700 {
+	color: #000;
+	background-color: #997404
+}
+
+.un-yellow-800 {
+	color: #fff;
+	background-color: #664d03
+}
+
+.un-yellow-900 {
+	color: #fff;
+	background-color: #332701
+}
+
+.un-green-100 {
+	color: #000;
+	background-color: #d1e7dd
+}
+
+.un-green-200 {
+	color: #000;
+	background-color: #a3cfbb
+}
+
+.un-green-300 {
+	color: #000;
+	background-color: #75b798
+}
+
+.un-green-400 {
+	color: #000;
+	background-color: #479f76
+}
+
+.un-green-500 {
+	color: #fff;
+	background-color: #198754
+}
+
+.un-green-600 {
+	color: #fff;
+	background-color: #146c43
+}
+
+.un-green-700 {
+	color: #fff;
+	background-color: #0f5132
+}
+
+.un-green-800 {
+	color: #fff;
+	background-color: #0a3622
+}
+
+.un-green-900 {
+	color: #fff;
+	background-color: #051b11
+}
+
+.un-teal-100 {
+	color: #000;
+	background-color: #d2f4ea
+}
+
+.un-teal-200 {
+	color: #000;
+	background-color: #a6e9d5
+}
+
+.un-teal-300 {
+	color: #000;
+	background-color: #79dfc1
+}
+
+.un-teal-400 {
+	color: #000;
+	background-color: #4dd4ac
+}
+
+.un-teal-500 {
+	color: #000;
+	background-color: #20c997
+}
+
+.un-teal-600 {
+	color: #000;
+	background-color: #1aa179
+}
+
+.un-teal-700 {
+	color: #fff;
+	background-color: #13795b
+}
+
+.un-teal-800 {
+	color: #fff;
+	background-color: #0d503c
+}
+
+.un-teal-900 {
+	color: #fff;
+	background-color: #06281e
+}
+
+.un-cyan-100 {
+	color: #000;
+	background-color: #cff4fc
+}
+
+.un-cyan-200 {
+	color: #000;
+	background-color: #9eeaf9
+}
+
+.un-cyan-300 {
+	color: #000;
+	background-color: #6edff6
+}
+
+.un-cyan-400 {
+	color: #000;
+	background-color: #3dd5f3
+}
+
+.un-cyan-500 {
+	color: #000;
+	background-color: #0dcaf0
+}
+
+.un-cyan-600 {
+	color: #000;
+	background-color: #0aa2c0
+}
+
+.un-cyan-700 {
+	color: #fff;
+	background-color: #087990
+}
+
+.un-cyan-800 {
+	color: #fff;
+	background-color: #055160
+}
+
+.un-cyan-900 {
+	color: #fff;
+	background-color: #032830
+}
+
+.un-gray-100 {
+	color: #000;
+	background-color: #f8f9fa
+}
+
+.un-gray-200 {
+	color: #000;
+	background-color: #e9ecef
+}
+
+.un-gray-300 {
+	color: #000;
+	background-color: #dee2e6
+}
+
+.un-gray-400 {
+	color: #000;
+	background-color: #ced4da
+}
+
+.un-gray-500 {
+	color: #000;
+	background-color: #adb5bd
+}
+
+.un-gray-600 {
+	color: #fff;
+	background-color: #6c757d
+}
+
+.un-gray-700 {
+	color: #fff;
+	background-color: #495057
+}
+
+.un-gray-800 {
+	color: #fff;
+	background-color: #343a40
+}
+
+.un-gray-900 {
+	color: #fff;
+	background-color: #212529
+}
+
+.un-white {
+	color: #000;
+	background-color: #fff
+}
+
+.un-black {
+	color: #fff;
+	background-color: #000
+}
+
 .h-1rem {
   height: 1rem !important;
 }

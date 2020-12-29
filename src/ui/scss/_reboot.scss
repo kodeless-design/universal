@@ -313,16 +313,16 @@ code {
 }
 
 kbd {
-  padding: $kbd-padding-y $kbd-padding-x;
-  @include font-size($kbd-font-size);
-  color: $kbd-color;
-  background-color: $kbd-bg;
+  padding: $kun-padding-y $kun-padding-x;
+  @include font-size($kun-font-size);
+  color: $kun-color;
+  background-color: $kun-bg;
   @include border-radius($border-radius-sm);
 
   kbd {
     padding: 0;
     @include font-size(1em);
-    font-weight: $nested-kbd-font-weight;
+    font-weight: $nested-kun-font-weight;
   }
 }
 

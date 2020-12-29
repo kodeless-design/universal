@@ -486,7 +486,7 @@ $mark-padding:                .2em !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
-$nested-kbd-font-weight:      $font-weight-bold !default;
+$nested-kun-font-weight:      $font-weight-bold !default;
 
 $list-inline-padding:         .5rem !default;
 
@@ -1337,10 +1337,10 @@ $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default
 $code-font-size:                    $small-font-size !default;
 $code-color:                        $pink !default;
 
-$kbd-padding-y:                     .2rem !default;
-$kbd-padding-x:                     .4rem !default;
-$kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         $white !default;
-$kbd-bg:                            $gray-900 !default;
+$kun-padding-y:                     .2rem !default;
+$kun-padding-x:                     .4rem !default;
+$kun-font-size:                     $code-font-size !default;
+$kun-color:                         $white !default;
+$kun-bg:                            $gray-900 !default;
 
 $pre-color:                         null !default;
