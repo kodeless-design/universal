@@ -1,6 +1,6 @@
 #### Breakpoints
 
-Breakpoints are the triggers in Bootstrap for how your layout responsive changes across device or viewport sizes.
+Breakpoints are the triggers in Universal for how your layout responsive changes across device or viewport sizes.
 
 ##### Core concepts
 
@@ -8,11 +8,11 @@ Breakpoints are the triggers in Bootstrap for how your layout responsive changes
 
 - **Use media queries to architect your CSS by breakpoint.** Media queries are a feature of CSS that allow you to conditionally apply styles based on a set of browser and operating system parameters. We most commonly use `min-width` in our media queries.
 
-- **Mobile first, responsive design is the goal.** Bootstrap's CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
+- **Mobile first, responsive design is the goal.** Universal's CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
 
 ##### Available breakpoints
 
-Bootstrap includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
+Universal includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
 
 <table class="table">
   <thead>
@@ -75,11 +75,11 @@ For more information and examples on how to modify our Sass maps and variables, 
 
 ##### Media queries
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+Since Universal is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
 ##### Min-width
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+Universal primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 ```scss
 // Source mixins
@@ -108,7 +108,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 
 ```scss
 // X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+// No media query for `xs` since this is the default in Universal
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { ... }
