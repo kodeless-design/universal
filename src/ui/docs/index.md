@@ -20,7 +20,7 @@ Many of our components require the use of JavaScript to function. Specifically, 
 
 ##### Bundle
 
-Include every Universal JavaScript plugin and dependency with one of our two bundles. Both `bootstrap.bundle.js` and `bootstrap.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers. For more information about what's included in Universal, please see our [contents](#/docs/getting-started/contents.md) section.
+Include every Universal JavaScript plugin and dependency with one of our two bundles. Both `universal.bundle.js` and `universal.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers. For more information about what's included in Universal, please see our [contents](#/docs/getting-started/contents.md) section.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/js/universal.bundle.min.js" integrity="sha256-iCwB5Cy+DWEFe50EhYwPF3HB9+T3exENnVYBYZ0IA2M=" crossorigin="anonymous"></script>

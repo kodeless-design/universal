@@ -1,12 +1,12 @@
 #### Containers
 
-Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.
+Containers are a fundamental building block of Universal that contain, pad, and align your content within a given device or viewport.
 
 ##### How they work
 
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+Containers are the most basic layout element in Universal and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
 
-Bootstrap comes with three different containers:
+Universal comes with three different containers:
 
 - `.container`, which sets a `max-width` at each responsive breakpoint
 - `.container-fluid`, which is `width: 100%` at all breakpoints
@@ -14,7 +14,7 @@ Bootstrap comes with three different containers:
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
-See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
+See them in action and compare them in our [Grid example](#/docs/examples/grid.md).
 
 <table class="table">
   <thead>
@@ -146,7 +146,7 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 ```
 ## Sass
 
-As shown above, Bootstrap generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
+As shown above, Universal generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
 ``` scss
 $container-max-widths: (
   sm: 540px,

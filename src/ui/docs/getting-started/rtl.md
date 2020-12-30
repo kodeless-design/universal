@@ -1,10 +1,10 @@
 #### RTL
 
-Learn how to enable support for right-to-left text in Bootstrap across our layout, components, and utilities.
+Learn how to enable support for right-to-left text in Universal across our layout, components, and utilities.
 
 ##### Get familiar
 
-We recommend getting familiar with Bootstrap first by reading through our [Getting Started Introduction page](#/docs/index.md). Once you've run through it, continue reading here for how to enable RTL.
+We recommend getting familiar with Universal first by reading through our [Getting Started Introduction page](#/docs/index.md). Once you've run through it, continue reading here for how to enable RTL.
 
 You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it powers our approach to RTL.
 
@@ -15,7 +15,7 @@ You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it
   </p>
 </div>
 
-There are two strict requirements for enabling RTL in Bootstrap-powered pages.
+There are two strict requirements for enabling RTL in Universal-powered pages.
 
 1. Set `dir="rtl"` on the `<html>` element.
 2. Add an appropriate `lang` attribute, like `lang="ar"`, on the `<html>` element.
@@ -66,9 +66,9 @@ Get started with one of our several [RTL examples]({{< docsref "/examples/#rtl" 
 
 ##### Approach
 
-Our approach to building RTL support into Bootstrap comes with two important decisions that impact how we write and use our CSS:
+Our approach to building RTL support into Universal comes with two important decisions that impact how we write and use our CSS:
 
-1. **First, we decided to build it with the [RTLCSS](https://rtlcss.com/) project.** This gives us some powerful features for managing changes and overrides when moving from LTR to RTL. It also allows us to build two versions of Bootstrap from one codebase.
+1. **First, we decided to build it with the [RTLCSS](https://rtlcss.com/) project.** This gives us some powerful features for managing changes and overrides when moving from LTR to RTL. It also allows us to build two versions of Universal from one codebase.
 
 2. **Second, we've renamed a handful of directional classes to adopt a logical properties approach.** Most of you have already interacted with logical properties thanks to our flex utilities—they replace direction properties like `left` and `right` in favor `start` and `end`. That makes the class names and values appropriate for LTR and RTL without any overhead.
 
@@ -91,12 +91,12 @@ $font-weight-bold: 700 #{/* rtl:600 */} !default;
 Which would ouput to the following for our default CSS and RTL CSS:
 
 ```css
-/* bootstrap.css */
+/* universal.css */
 dt {
   font-weight: 700 /* rtl:600 */;
 }
 
-/* bootstrap.rtl.css */
+/* universal.rtl.css */
 dt {
   font-weight: 600;
 }
