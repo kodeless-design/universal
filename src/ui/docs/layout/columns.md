@@ -11,9 +11,9 @@ Learn how to modify columns with a handful of options for alignment, ordering, a
 
 - **Columns build on the grid's flexbox architecture.** Flexbox means we have options for changing individual columns and [modifying groups of columns at the row level](#/docs/layout/grid.md). You choose how columns grow, shrink, or otherwise change.
 
-- **When building grid layouts, all content goes in columns.** The hierarchy of Bootstrap's grid goes from [container](#/docs/layout/containers.md) to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
+- **When building grid layouts, all content goes in columns.** The hierarchy of Universal's grid goes from [container](#/docs/layout/containers.md) to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
 
-- **Bootstrap includes predefined classes for creating fast, responsive layouts.** With [six breakpoints](#/docs/layout/breakpoints.md) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+- **Universal includes predefined classes for creating fast, responsive layouts.** With [six breakpoints](#/docs/layout/breakpoints.md) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
 
 ##### Alignment
 
@@ -523,7 +523,7 @@ The `.col-*` classes can also be used outside a `.row` to give an element a spec
 
 The classes can be used together with utilities to create responsive floated images. Make sure to wrap the content in a [`.clearfix`](#/docs/helpers/clearfix.md}) wrapper to clear the float if the text is shorter.
 
-<div class="un-example">
+<div class="un-example mb-2">
     <div class="clearfix">
         <svg class="bd-placeholder-img col-md-6 float-md-end mb-3 ms-md-3" width="100%" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive floated image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Responsive floated image</text></svg>
         <p>
