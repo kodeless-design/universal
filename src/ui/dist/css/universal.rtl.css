@@ -1130,8 +1130,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
+  background-color: #dee2e6;
   border-radius: 0.3rem;
   max-width: 100%;
   height: auto;

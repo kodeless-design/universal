@@ -190,6 +190,24 @@
 	min-height: 240px
 }
 
+.un-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none
+}
+
+.un-placeholder-img-lg {
+	font-size: calc(1.475rem + 2.7vw)
+}
+
+@media (min-width: 1200px) {
+	.un-placeholder-img-lg {
+		font-size: 3.5rem
+	}
+}
+
 .example-container {
 	width: 800px;
 	width: 100%;
