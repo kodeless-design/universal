@@ -528,7 +528,7 @@ $table-border-color:          $border-color !default;
 
 $table-striped-order:         odd !default;
 
-$table-group-separator-color: currentColor !default;
+$table-group-separator-color: $gray-300 !default;
 
 $table-caption-color:         $text-muted !default;
 
