@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Universal (v1.0.0): dom/event-handler.js
+ * Universal (v1.0.2): dom/event-handler.js
  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */

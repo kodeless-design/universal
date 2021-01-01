@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Universal (v1.0.0): alert.js
+ * Universal (v1.0.2): alert.js
  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */

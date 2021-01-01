@@ -35,7 +35,7 @@ hr {
 }
 
 hr:not([size]) {
-  height: 1px;
+  height: 0px;
 }
 
 h6, h5, h4, h3, h2, h1 {

@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Universal (v1.0.0): dropdown.js
+ * Universal (v1.0.2): dropdown.js
  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */

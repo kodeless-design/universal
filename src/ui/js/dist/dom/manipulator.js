@@ -1,5 +1,5 @@
 /*!
-  * Universal manipulator.js v1.0.0 (undefined)
+  * Universal manipulator.js v1.0.2 (undefined)
   * Copyright 2020-2020 Kodeless Design
   * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
   */
@@ -11,7 +11,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): dom/manipulator.js
+   * Universal (v1.0.2): dom/manipulator.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

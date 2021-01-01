@@ -1,5 +1,5 @@
 /*!
-  * Universal alert.js v1.0.0 (undefined)
+  * Universal alert.js v1.0.2 (undefined)
   * Copyright 2020-2020 Kodeless Design
   * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
   */
@@ -38,7 +38,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): util/index.js
+   * Universal (v1.0.2): util/index.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

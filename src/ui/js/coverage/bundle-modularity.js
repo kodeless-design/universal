@@ -1749,7 +1749,7 @@
 	});
 
 	/*!
-	  * Universal data.js v1.0.0 (undefined)
+	  * Universal data.js v1.0.2 (undefined)
 	  * Copyright 2020-2020 Kodeless Design
 	  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	  */
@@ -1759,7 +1759,7 @@
 	  })(commonjsGlobal, function () {
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): dom/data.js
+	     * Universal (v1.0.2): dom/data.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */
@@ -1829,7 +1829,7 @@
 	});
 
 	/*!
-	  * Universal event-handler.js v1.0.0 (undefined)
+	  * Universal event-handler.js v1.0.2 (undefined)
 	  * Copyright 2020-2020 Kodeless Design
 	  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	  */
@@ -1839,7 +1839,7 @@
 	  })(commonjsGlobal, function () {
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): util/index.js
+	     * Universal (v1.0.2): util/index.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */
@@ -1858,7 +1858,7 @@
 	    var isRTL = document.documentElement.dir === 'rtl';
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): dom/event-handler.js
+	     * Universal (v1.0.2): dom/event-handler.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */
@@ -2136,7 +2136,7 @@
 	});
 
 	/*!
-	  * Universal manipulator.js v1.0.0 (undefined)
+	  * Universal manipulator.js v1.0.2 (undefined)
 	  * Copyright 2020-2020 Kodeless Design
 	  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	  */
@@ -2146,7 +2146,7 @@
 	  })(commonjsGlobal, function () {
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): dom/manipulator.js
+	     * Universal (v1.0.2): dom/manipulator.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */
@@ -2221,7 +2221,7 @@
 	});
 
 	/*!
-	  * Universal selector-engine.js v1.0.0 (undefined)
+	  * Universal selector-engine.js v1.0.2 (undefined)
 	  * Copyright 2020-2020 Kodeless Design
 	  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	  */
@@ -2231,7 +2231,7 @@
 	  })(commonjsGlobal, function () {
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): dom/selector-engine.js
+	     * Universal (v1.0.2): dom/selector-engine.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */
@@ -2315,7 +2315,7 @@
 	var require$$0 = /*@__PURE__*/getAugmentedNamespace(lib);
 
 	/*!
-	  * Universal tooltip.js v1.0.0 (undefined)
+	  * Universal tooltip.js v1.0.2 (undefined)
 	  * Copyright 2020-2020 Kodeless Design
 	  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	  */
@@ -2403,7 +2403,7 @@
 	    }
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): util/index.js
+	     * Universal (v1.0.2): util/index.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */
@@ -2563,7 +2563,7 @@
 	    };
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): util/sanitizer.js
+	     * Universal (v1.0.2): util/sanitizer.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */
@@ -3483,7 +3483,7 @@
 	var Tooltip = /*@__PURE__*/getDefaultExportFromCjs(tooltip);
 
 	/*!
-	  * Universal carousel.js v1.0.0 (undefined)
+	  * Universal carousel.js v1.0.2 (undefined)
 	  * Copyright 2020-2020 Kodeless Design
 	  * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	  */
@@ -3547,7 +3547,7 @@
 	    }
 	    /**
 	     * --------------------------------------------------------------------------
-	     * Universal (v1.0.0): util/index.js
+	     * Universal (v1.0.2): util/index.js
 	     * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
 	     * --------------------------------------------------------------------------
 	     */

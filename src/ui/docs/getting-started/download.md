@@ -4,7 +4,7 @@ Download Universal to get the compiled CSS and JavaScript, source code, or inclu
 
 ##### Compiled CSS and JS
 
-Download ready-to-use compiled code for **Universal 1.0.0** to easily drop into your project, which includes:
+Download ready-to-use compiled code for **Universal 1.0.2** to easily drop into your project, which includes:
 
 - Compiled and minified CSS bundles (see [CSS files comparison](#/docs/getting-started/contents.md))
 - Compiled and minified JavaScript plugins (see [JS files comparison](#/docs/getting-started/contents.md))
@@ -35,15 +35,15 @@ If you want to download and examine our [examples](#/docs/examples/index.md), yo
 Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached version of Universal's compiled CSS and JS to your project.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/css/universal.min.css" integrity="sha256-I35SFWi2Whrdv6cvobUfnr03rOlhp4Irtn4ax2uCiyc=" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/js/universal.bundle.min.js" integrity="sha256-iCwB5Cy+DWEFe50EhYwPF3HB9+T3exENnVYBYZ0IA2M=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.2/dist/css/universal.min.css" integrity="sha256-I35SFWi2Whrdv6cvobUfnr03rOlhp4Irtn4ax2uCiyc=" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.2/dist/js/universal.bundle.min.js" integrity="sha256-iCwB5Cy+DWEFe50EhYwPF3HB9+T3exENnVYBYZ0IA2M=" crossorigin="anonymous"></script>
 ```
 
 If you're using our compiled JavaScript and prefer to include Popper separately, add Popper before our JS, via a CDN preferably.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/js/universal.min.js" integrity="sha256-d+j1JZHnieT7jCg89yE0eUHlM7XnSjVTrW53QfpkH2g=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.2/dist/js/universal.min.js" integrity="sha256-d+j1JZHnieT7jCg89yE0eUHlM7XnSjVTrW53QfpkH2g=" crossorigin="anonymous"></script>
 ```
 
 ##### Package managers

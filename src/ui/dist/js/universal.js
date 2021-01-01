@@ -1,5 +1,5 @@
 /*!
-  * Universal v1.0.0 (undefined)
+  * Universal v1.0.2 (undefined)
   * Copyright 2020-2020 Kodeless Design
   * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
   */
@@ -73,7 +73,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): util/index.js
+   * Universal (v1.0.2): util/index.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -276,7 +276,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): dom/data.js
+   * Universal (v1.0.2): dom/data.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -343,7 +343,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): dom/event-handler.js
+   * Universal (v1.0.2): dom/event-handler.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -877,7 +877,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): dom/manipulator.js
+   * Universal (v1.0.2): dom/manipulator.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -949,7 +949,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): dom/selector-engine.js
+   * Universal (v1.0.2): dom/selector-engine.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3100,7 +3100,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): util/sanitizer.js
+   * Universal (v1.0.2): util/sanitizer.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

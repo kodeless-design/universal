@@ -23,7 +23,7 @@ There are two strict requirements for enabling RTL in Universal-powered pages.
 From there, you'll need to include an RTL version of our CSS. For example, here's the stylesheet for our compiled and minified CSS with RTL enabled:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/css/universal.min.css" integrity="sha256-I35SFWi2Whrdv6cvobUfnr03rOlhp4Irtn4ax2uCiyc=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.2/dist/css/universal.min.css" integrity="sha256-I35SFWi2Whrdv6cvobUfnr03rOlhp4Irtn4ax2uCiyc=" crossorigin="anonymous">
 ```
 
 ##### Starter template
@@ -39,7 +39,7 @@ You can see the above requirements reflected in this modified RTL starter templa
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Universal CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/css/universal.min.css" integrity="sha256-I35SFWi2Whrdv6cvobUfnr03rOlhp4Irtn4ax2uCiyc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.2/dist/css/universal.min.css" integrity="sha256-I35SFWi2Whrdv6cvobUfnr03rOlhp4Irtn4ax2uCiyc=" crossorigin="anonymous">
 
     <title>Hello, world!</title>
   </head>
@@ -49,12 +49,12 @@ You can see the above requirements reflected in this modified RTL starter templa
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Universal Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/js/universal.bundle.min.js" integrity="sha256-iCwB5Cy+DWEFe50EhYwPF3HB9+T3exENnVYBYZ0IA2M=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.2/dist/js/universal.bundle.min.js" integrity="sha256-iCwB5Cy+DWEFe50EhYwPF3HB9+T3exENnVYBYZ0IA2M=" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Universal JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.0/dist/js/universal.min.js" integrity="sha256-d+j1JZHnieT7jCg89yE0eUHlM7XnSjVTrW53QfpkH2g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@kodeless_design/universal-ui@1.0.2/dist/js/universal.min.js" integrity="sha256-d+j1JZHnieT7jCg89yE0eUHlM7XnSjVTrW53QfpkH2g=" crossorigin="anonymous"></script>
     -->
   </body>
 </html>

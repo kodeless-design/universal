@@ -1,5 +1,5 @@
 /*!
-  * Universal data.js v1.0.0 (undefined)
+  * Universal data.js v1.0.2 (undefined)
   * Copyright 2020-2020 Kodeless Design
   * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
   */
@@ -11,7 +11,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Universal (v1.0.0): dom/data.js
+   * Universal (v1.0.2): dom/data.js
    * Licensed under MIT (https://github.com/kodeless-design/universal/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
